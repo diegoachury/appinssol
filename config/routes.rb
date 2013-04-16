@@ -1,4 +1,19 @@
 Appinssol::Application.routes.draw do
+  resources :welcomes
+
+
+  resources :customers
+
+
+  resources :brands
+
+
+  resources :types
+
+
+  resources :categories
+
+
   get "home/index"
 
   # The priority is based upon order of creation:

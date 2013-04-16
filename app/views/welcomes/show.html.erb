@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Logo:</b>
+  <%= @welcome.logo %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @welcome.name %>
+</p>
+
+<p>
+  <b>Leyenda:</b>
+  <%= @welcome.leyenda %>
+</p>
+
+<p>
+  <b>Mensaje:</b>
+  <%= @welcome.mensaje %>
+</p>
+
+<ul class="thumbnails">
+                              <% @customers.each do |customer| %>
+                                <li class="span2">
+                                    <a href="#" class="thumbnail">
+                                        <img src="<%= customer.url_photo %>"></a>
+                                    </li>
+                                    <% end %>
+                                </ul>
+
+
+
+<%= link_to 'Edit', edit_welcome_path(@welcome) %> |
+<%= link_to 'Back', welcomes_path %>

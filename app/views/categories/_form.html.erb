@@ -1,0 +1,13 @@
+<%= simple_form_for(@category) do |f| %>
+    <%= f.error_notification %>
+
+  <div class="form-imputs">
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :descripcion %>
+  
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

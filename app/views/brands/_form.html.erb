@@ -1,0 +1,16 @@
+<%= simple_form_for(@brand) do |f| %>
+    <%= f.error_notification %>
+
+  <div class="form-imputs">
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :descripcion %>
+    <%= f.input :ruta_pdf %>
+     <%= f.association :type %>
+  
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
