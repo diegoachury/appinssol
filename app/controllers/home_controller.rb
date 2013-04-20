@@ -5,4 +5,20 @@ class HomeController < ApplicationController
 
   	
   end
+
+  def servicio
+  	@customers = Customer.all
+
+  end
+
+   def company
+  	@customers = Customer.all
+
+  end
+
+  def gestion
+    @customers = Customer.all
+
+  end
+
 end

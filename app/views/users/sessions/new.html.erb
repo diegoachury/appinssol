@@ -1,0 +1,75 @@
+<style>
+.azul {
+	 background: url(/img/protec.jpg);
+            border-radius: 1em;
+}
+body{
+	background: black;
+
+}
+h1 {
+	
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	font-weight: 500;
+	text-shadow:2px 2px #000000;
+}
+
+h2 {
+	
+	font-family: 'Ubuntu', sans-serif;
+	color: #f18200;
+	font-weight: 500;
+	text-shadow:2px 2px #000000;
+}
+</style>
+<div class="azul">
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="row">
+				<div class="span4">
+
+					
+			<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html:{class: "well"}) do |f| %>
+			<fieldset>
+						<legend><h2>Iniciar sesión</h2></legend>
+
+    			<%= f.input :email, label: 'Correo Electronico', :required => false, :autofocus => true %>
+    			<%= f.input :password,label: 'Contraseña', :required => false %>
+    			<%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+  			
+
+  <div class="form-actions">
+    <%= f.button :submit, "Iniciar" %>
+  </div>
+  <%= render "devise/shared/links" %>
+  </fieldset>
+<% end %>
+
+
+
+
+				</div>
+				<div class="span6 offset2" style="padding-top: 30px;">
+					<h1>INSSOL SAS</h1>
+					<blockquote>
+						<h2>Es un líder en proveer soluciones de protección, con operaciones en todo el pais.</h2>
+					</blockquote>
+				</div>
+			</div>
+			
+
+
+
+		</div>
+
+	</div>
+
+</div>
+</div>
+
+
+
+
+

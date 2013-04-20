@@ -1,4 +1,5 @@
 class WelcomesController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:index, :show]
   # GET /welcomes
   # GET /welcomes.json
   def index

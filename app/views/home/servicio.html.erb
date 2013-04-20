@@ -1,0 +1,86 @@
+<div class="container">
+<div class="row">
+  <div class="span12">
+    <h4>"SOMOS FABRICANTES, MAYORISTAS,  Y DETAL DE ROPA DE TRABAJO, DOTACIONES Y SEGURIDAD INDUSTRIAL"</h4>
+    <div class="articulo">
+    <div class="row">
+      <div class="span6">
+      	<div class="media">
+              <div class="pull-left">
+                <img  src="/img/ico-3.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Seguridad industrial Y Salud ocupacional</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+            <hr>
+
+            <div class="media">
+              <div class="pull-left">
+                <img src="/img/ico-2.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Mantenimiento en equipos de medición</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+
+
+
+        </div>
+        <!--otra columna-->
+      <div class="span6">
+      	<div class="media">
+              <div class="pull-left">
+                <img  src="/img/ico-4.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Asesorías en emergencias y ambientales</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+            <hr>
+            <div class="media">
+              <div class="pull-left">
+                <img src="/img/ico-1.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Dotaciones industriales y operativas</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+      	   
+
+      </div>
+
+    </div>
+    </div>
+  </div>
+
+ 
+</div>
+
+
+</div>
+<div class="container">
+<div class="articulo">
+  	<div class="well">
+  		<fieldset>
+  			<legend>Trabajamos con las marcas mas reconocidas:</legend>
+  			     <ul class="thumbnails">
+                <% @customers.each do |customer| %>
+                <li class="span2" style="width: 123px; height: 44px;">
+                    <a href="#" class="thumbnail">
+                        <img src="<%= customer.url_photo %>" ></a>
+                    </li>
+                    <% end %>
+                </ul>
+
+  		
+  		</fieldset>
+  	</div>
+
+</div>
+</div>
+

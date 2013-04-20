@@ -12,16 +12,17 @@
 h1 {
 	
 	font-family: 'Ubuntu', sans-serif;
-	color: white;
+	color: #f18200;
 	font-weight: 500;
-	text-shadow:0 0 3px #ff8900; 
+	text-shadow:2px 2px #000000;
 }
 
 #perfil p {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 19px;
+	font-size: 25px;
+	line-height: 24px;
 	color: white;
-	text-shadow:0 0 3px #186294;
+	text-shadow:2px 2px #000000;
 }
 
 .carousel-caption {
@@ -43,4 +44,22 @@ h5 {
 	color: #f18200;
 	font-size: 17px;
 	text-shadow:2px 2px #e0dedc;
-}	
+}
+//images de marcas
+
+.thumbnails > li {
+  float: left;
+  margin-bottom: 12px;
+  margin-left: 4px;
+}
+
+//circulos
+.articulo {
+padding-top: 65px;
+	
+}
+
+
+
+
+

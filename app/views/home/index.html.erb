@@ -1,6 +1,6 @@
 <style>
 body {
-    background: url(/img/background2.png);
+    background: url(/img/fondo_r.jpg);
             background-size:100% 100%;
             background-repeat:no-repeat; 
 }
@@ -20,11 +20,12 @@ body {
             	<h1><%= welcome.name %></h1>
                 <hr>
             	<p><strong><%= welcome.leyenda %></strong><br>
-            		
+            	<% end %>	
                     <br>
-            		<button class="btn btn-large btn-warning" type="button">Registrar</button> <button class="btn btn-large btn-primary" type="button">Inciar</button>
+                    <%= link_to "Registrar", new_user_registration_path, :class =>"btn btn-large btn-warning" %> 
+                    <%= link_to "Iniciar", new_user_session_path, :class => "btn btn-large btn-primary" %>
             	</p>
-                 <% end %>
+                 
                    <hr>
                     <h3>Clientes</h3>
                      <ul class="thumbnails">

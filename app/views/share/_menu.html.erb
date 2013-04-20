@@ -15,12 +15,29 @@
                             <li><a href="#about">Servicio</a></li>
                             <li><a href="#about">Gestion</a></li>
                             <li><a href="#contact">Contacto</a></li>
-                           
+                            <% if user_signed_in? %>
+                            <li><a href="#contact">Cotizar producto</a></li>
+                            <li><img src="/img/clic.gif"></li>
+
+                           <%end%>
                         </ul>
+                        
                        <p class="navbar-text pull-right">
-                          <a href="#" class="navbar-link">Registrar</a> | 
-                          <a href="#" class="navbar-link">Iniciar</a>
+                        <% if admin_signed_in? %>
+                        <%= link_to 'Perfil', edit_admin_registration_path %> |
+          <%= link_to 'Cerrar sesión', destroy_admin_session_path, :method => :delete %>
+        <% else %>
+        <% if user_signed_in? %>
+        <%= current_user.name_empresa %> | <%= link_to 'Perfil', edit_user_registration_path %> |
+          <%= link_to 'Cerrar sesión', destroy_user_session_path, :method => :delete %>
+          <% else %>
+             <%= link_to "Registrar", new_user_registration_path %> |
+          <%= link_to "Iniciar", new_user_session_path %> 
+
+
                       </p>
+                         <% end -%>
+                          <% end -%>
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
