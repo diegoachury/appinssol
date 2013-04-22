@@ -1,9 +1,20 @@
 Appinssol::Application.routes.draw do
+  resources :quotes
+  get 'cotizar', to: 'quotes#new', as: :cotizar
+
+
   resources :contacts
+      get 'contacto', to: 'contacts#new', as: :contacto
 
 
   devise_for :users
 
+  devise_scope :user do
+    get 'registrar', to: 'devise/registrations#new', as: :registrar
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout  
+  end
+ 
   devise_for :admins
 
   resources :welcomes
@@ -22,8 +33,10 @@ Appinssol::Application.routes.draw do
 
 
   get "home/index"
-    get "home/servicio"
-      get "home/company"
+  get 'inicio', to: 'home#index', as: :inicio
+    get 'servicios', to: 'home#servicio', as: :servicios
+    get 'company', to: 'home#company', as: :company
+    get 'gestion', to: 'home#gestion', as: :gestion
         get "home/gestion"    
 
   root :to => 'home#index'

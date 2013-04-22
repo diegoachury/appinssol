@@ -10,13 +10,13 @@
                     <a class="brand" href="#"><img src="/img/logo.png"></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Inicio</a></li>
-                            <li><a href="#">Compañia</a></li>
-                            <li><a href="#about">Servicio</a></li>
-                            <li><a href="#about">Gestion</a></li>
-                            <li><a href="#contact">Contacto</a></li>
+                            <li><%= link_to "inicio", inicio_path %></li>
+                            <li><%= link_to "Compañia", company_path %></li>
+                            <li><%= link_to "Servicios", servicios_path %></li>
+                            <li><%= link_to "Gestion", gestion_path %></li>
+                            <li><%= link_to "Contacto", contacto_path %></li>
                             <% if user_signed_in? %>
-                            <li><a href="#contact">Cotizar producto</a></li>
+                            <li><%= link_to "Cotizar producto", cotizar_path %></li>
                             <li><img src="/img/clic.gif"></li>
 
                            <%end%>
@@ -29,10 +29,10 @@
         <% else %>
         <% if user_signed_in? %>
         <%= current_user.name_empresa %> | <%= link_to 'Perfil', edit_user_registration_path %> |
-          <%= link_to 'Cerrar sesión', destroy_user_session_path, :method => :delete %>
+          <%= link_to 'Cerrar sesión', logout_path %>
           <% else %>
-             <%= link_to "Registrar", new_user_registration_path %> |
-          <%= link_to "Iniciar", new_user_session_path %> 
+             <%= link_to "Registrar", registrar_path %> |
+          <%= link_to "Iniciar", login_path %> 
 
 
                       </p>

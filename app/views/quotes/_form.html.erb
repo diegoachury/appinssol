@@ -1,7 +1,7 @@
-<%= simple_form_for(@contact) do |f| %>
+<%= simple_form_for(@quote) do |f| %>
   <%= f.error_notification %>
 <fieldset>
-  <legend><h1>Contactenos</h1></legend>
+  <legend><h1>Cotizar producto</h1></legend>
   <div class="row">
     <div class="span12">
    
@@ -19,7 +19,7 @@
  
         <address>
           <strong>Correo Electronico</strong><br>
-          <a href="mailto:#">comercial@inssol.com.co</a>
+          <a href="mailto:#">first.last@example.com</a>
         </address>
       </div>
 
@@ -33,6 +33,10 @@
           <abbr title="movil">Celular:</abbr> 3168752386
         </address>
  
+        <address>
+          <strong>Correo Electronico</strong><br>
+          <a href="mailto:#">comercial@inssol.com.co</a>
+        </address>
       </div>
       
 
@@ -40,12 +44,13 @@
     </div>
     
     <div class="span3">
+
+
+
      
-   <%= f.input :nombre, label: false, placeholder: 'Nombre completo'%>
-            <%= f.input :email, label: false, placeholder: 'Correo Electronico'%>
-            <%= f.input :direccion, label: false, placeholder: 'direccion' %>
-            <%= f.input :ciudad, label: false, placeholder: 'Ciudad' %>
-            <%= f.input :telefono, label: false, placeholder: 'telefono' %>
+
+            <%= f.association :type %>
+            <%= f.association :brand %> 
             <%= f.input :comentario, label: false, placeholder: 'Nota', :input_html => { :rows => 5 }  %>
         <%= f.button :submit, "enviar", :class => "btn btn-large btn-warning"%>
     </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420201720) do
+ActiveRecord::Schema.define(:version => 20130422154141) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -71,6 +71,24 @@ ActiveRecord::Schema.define(:version => 20130420201720) do
   end
 
   add_index "customers", ["welcome_id"], :name => "index_customers_on_welcome_id"
+
+  create_table "quotes", :force => true do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.string   "direccion"
+    t.string   "ciudad"
+    t.string   "telefono"
+    t.text     "comentario"
+    t.integer  "brand_id"
+    t.integer  "type_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  add_index "quotes", ["brand_id"], :name => "index_quotes_on_brand_id"
+  add_index "quotes", ["type_id"], :name => "index_quotes_on_type_id"
+  add_index "quotes", ["user_id"], :name => "index_quotes_on_user_id"
 
   create_table "types", :force => true do |t|
     t.string   "name"
