@@ -1,3 +1,13 @@
+<style >
+body{
+  background: #FDFDFD url(/img/bg_main.gif) repeat;
+  background-attachment: fixed;
+  position: relative;
+ 
+}
+</style>
+
+
 <%= simple_form_for(@contact) do |f| %>
   <%= f.error_notification %>
 <fieldset>
@@ -5,7 +15,7 @@
   <div class="row">
     <div class="span12">
    
-    <div class="span8">
+    <div class="span7">
       <div class="span3">
         <img src="/img/building-left.png">
         <br>
@@ -39,15 +49,18 @@
       
     </div>
     
-    <div class="span3">
-     
-   <%= f.input :nombre, label: false, placeholder: 'Nombre completo'%>
+    <div class="span3 post_block">
+        <p>Cuentanos como te podemos ayudar</p>
+        <%= f.input :nombre, label: false, placeholder: 'Nombre completo'%>
             <%= f.input :email, label: false, placeholder: 'Correo Electronico'%>
             <%= f.input :direccion, label: false, placeholder: 'direccion' %>
             <%= f.input :ciudad, label: false, placeholder: 'Ciudad' %>
             <%= f.input :telefono, label: false, placeholder: 'telefono' %>
             <%= f.input :comentario, label: false, placeholder: 'Nota', :input_html => { :rows => 5 }  %>
         <%= f.button :submit, "enviar", :class => "btn btn-large btn-warning"%>
+ 
+     
+   
     </div>
     <div class="span12">
      
