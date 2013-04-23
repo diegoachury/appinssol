@@ -21,7 +21,7 @@
  
         <address>
           <strong>Correo Electronico</strong><br>
-          <a href="mailto:#">first.last@example.com</a>
+          <a href="mailto:#">comercial@inssol.com.co</a>
         </address>
       </div>
 
@@ -35,10 +35,7 @@
           <abbr title="movil">Celular:</abbr> 3168752386
         </address>
  
-        <address>
-          <strong>Correo Electronico</strong><br>
-          <a href="mailto:#">comercial@inssol.com.co</a>
-        </address>
+        
       </div>
       
 
@@ -51,8 +48,8 @@
 
      
 
-            <%= f.association :type %>
-            <%= f.association :brand %> 
+            <%= f.association :type, label: false, prompt: "Tipo de proteccion" %>
+            <%= f.association :brand, label: false, prompt: "selecciona la marca" %> 
             <%= f.input :comentario, label: false, placeholder: 'Nota', :input_html => { :rows => 5 }  %>
         <%= f.button :submit, "enviar", :class => "btn btn-large btn-warning"%>
     </div>

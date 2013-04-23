@@ -28,7 +28,7 @@
           <%= link_to 'Cerrar sesión', destroy_admin_session_path, :method => :delete %>
         <% else %>
         <% if user_signed_in? %>
-        <%= current_user.name_empresa %> | <%= link_to 'Perfil', edit_user_registration_path %> |
+        <%= current_user.nombre %>, <%= current_user.name_empresa %> | <%= link_to 'Perfil', edit_user_registration_path %> |
           <%= link_to 'Cerrar sesión', logout_path %>
           <% else %>
              <%= link_to "Registrar", registrar_path %> |

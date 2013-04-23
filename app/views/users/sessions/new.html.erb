@@ -37,13 +37,12 @@ h2 {
 
     			<%= f.input :email, label: 'Correo Electronico', :required => false, :autofocus => true %>
     			<%= f.input :password,label: 'Contraseña', :required => false %>
-    			<%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    			<%= f.input :remember_me, label: 'Recordar', :as => :boolean if devise_mapping.rememberable? %>
   			
 
   <div class="form-actions">
     <%= f.button :submit, "Iniciar" %>
   </div>
-  <%= render "devise/shared/links" %>
   </fieldset>
 <% end %>
 

@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   attr_accessible :cargo, :pais, :ciudad, :nombre, :apellido, :name_empresa, :nit, :genero, :address_empresa, :telefono, :celular, :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   has_many :quote
+
+  validates :cargo, :nombre, :name_empresa, :telefono, :celular, :email, :password, :password_confirmation, :presence => true
+  validates :email, :uniqueness => true
+
 end
