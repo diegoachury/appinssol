@@ -18,7 +18,7 @@ body {
             </div><!-- finaliza margen central-->
             <div class="span3" id="perfil" style="padding-top:40px;">
                  <% @welcomes.each do |welcome| %>
-            	<h1><%= welcome.name %></h1>
+            	<h1 id="titulo"><%= welcome.name %></h1>
                 <hr>
             	<p><strong><%= welcome.leyenda %></strong><br>
             	<% end %>	
