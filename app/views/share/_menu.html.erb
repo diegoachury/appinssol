@@ -10,13 +10,13 @@
                     <a class="brand" href="#"><img src="/img/logo.png"></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li><%= link_to "inicio", inicio_path %></li>
-                            <li><%= link_to "Compañia", company_path %></li>
-                            <li><%= link_to "Servicios", servicios_path %></li>
-                            <li><%= link_to "Gestion", gestion_path %></li>
-                            <li><%= link_to "Contacto", contacto_path %></li>
+                            <li><%= link_to "INICIO", inicio_path, :class => "menu" %></li>
+                            <li><%= link_to "COMPAÑIA", company_path, :class => "menu" %></li>
+                            <li><%= link_to "SERVICIOS", servicios_path, :class => "menu" %></li>
+                            <li><%= link_to "GESTION", gestion_path, :class => "menu" %></li>
+                            <li><%= link_to "CONTACTO", contacto_path, :class => "menu" %></li>
                             <% if user_signed_in? %>
-                            <li><%= link_to "Cotizar producto", cotizar_path %></li>
+                            <li><%= link_to "COTIZAR PRODUCTO", cotizar_path, :class => "menu" %></li>
                             <li><img src="/img/clic.gif"></li>
 
                            <%end%>
