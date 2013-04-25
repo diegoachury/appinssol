@@ -13,6 +13,9 @@
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Respiratoria</a>
+
+                    <%if user_signed_in? %>
+
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/hwz0yqiuar0xaj4/Catalogo.pdf"><img src="/img/logo/3m-logo.png" style="width: 24px; height: 24px;"> - 3M</a></li>
@@ -28,11 +31,17 @@
           
                      
                     </ul>
+                    <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Manual</a>
+                      <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/8vzh934rdftonoa/ansell-catalogo.pdf"><img src="/img/logo/ansell-logo.png" style="width: 24px; height: 24px;"> - Ansell</a></li>
@@ -47,12 +56,18 @@
                          <li><a tabindex="-1" href="https://www.dropbox.com/s/4h137hkxubebgpr/wells-catalogo.pdf"><img src="/img/logo/wells-logo.png" style="width: 24px; height: 24px;"> - Wells Lamont</a></li>
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
                   
 
 
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Cabeza y Facial</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/2o9np22lzwy5wuk/3m-catalogo.pdf"><img src="/img/logo-3m.png" style="width: 24px; height: 24px;"> - 3M solutions</a></li>
@@ -69,11 +84,17 @@
                          <li><a tabindex="-1" href="https://www.dropbox.com/s/f550jnkyd8mqdgt/weldas-catalogo.pdf"><img src="/img/weldas-logo.png" style="width: 24px; height: 24px;"> - Weldas</a></li>    
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
                    <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Visual</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/44q5xu86olyb8en/Catalogo.pdf"><img src="/img/logo/3m-logo.png" style="width: 24px; height: 24px;"> - 3M</a></li>
@@ -91,12 +112,18 @@
           
                      
                     </ul>
+                    <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="https://www.dropbox.com/s/ibaacygiqjv0npl/full-catalogo.pdf">Proteccion Auditiva</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/bjkvwv35s1s6rkw/3m_catalogo.pdf"><img src="/img/logo-3m.png" style="width: 24px; height: 24px;"> - 3M solutions</a></li>
@@ -104,6 +131,11 @@
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/lytsrp621ml16oo/moldex-catalogo.pdf"><img src="/img/moldex-logo.png" style="width: 24px; height: 24px;"> - Moldex</a></li>
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
@@ -111,6 +143,7 @@
 
                    <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Calzado</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/0rkhkjo9jhn9a7a/ergodyne-catalogo.pdf"><img src="/img/logo/ergodyne-logo.png" style="width: 24px; height: 24px;"> - Ergodyne</a></li>
@@ -118,11 +151,17 @@
                        
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Corporal</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/oruopb7cgic85sk/ansell-catalogo.pdf"><img src="/img/logo/ansell-logo.png" style="width: 24px; height: 24px;"> - Ansell</a></li>
@@ -134,10 +173,16 @@
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/g9plp1b5l35zpwl/rivercity-catalogo.pdf"><img src="/img/logo/rivercity-logo.png" style="width: 24px; height: 24px;"> - River City</a></li>
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion Soldadura</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/2zfmog6keukfxxu/Catalogo.pdf"><img src="/img/logo/3m-logo.png" style="width: 24px; height: 24px;"> - 3M</a></li>
@@ -151,6 +196,11 @@
           
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
@@ -158,6 +208,7 @@
 
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion en Alturas</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/kur8d8rbgyhxa32/ergodyne-catalogo.pdf"><img src="/img/logo/ergodyne-logo.png" style="width: 24px; height: 24px;"> - Ergodyne</a></li>
@@ -168,18 +219,29 @@
           
                      
                     </ul>
+                    <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>              
 
                   
 
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Proteccion en el Agua</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/3e1wue0zp4a49b5/stearns-catalogo.pdf"><img src="/img/logo/stearns-logo.png" style="width: 24px; height: 24px;"> - Stearns</a></li>
           
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
                  
@@ -191,13 +253,14 @@
                   </li>
 
 
-<li class="dropdown-submenu">
+                    <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Uniformes Industriales</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Ropa Reflectiva</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/47hi6o319a6aw6t/Catalogo.pdf"><img src="/img/logo/keepsafe-logo.png" style="width: 24px; height: 24px;"> - Keep Safe</a></li>
@@ -206,6 +269,11 @@
                        <li><a tabindex="-1" href="https://www.dropbox.com/s/p9qxfbd5f9uz9oy/Catalogo.pdf"><img src="/img/logo/rivercity-logo.png" style="width: 24px; height: 24px;"> - River City</a></li>
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
               
                     </ul>
@@ -217,12 +285,13 @@
 
  <!--inicio otro menu-->
     <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Otros</a>
+                    <a tabindex="-1" href="#">Linea Especializada</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 
 
                            <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Señalizacion</a>
+                    <a tabindex="-1" href="#">Instrumentacion</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/s63q0d157iranhz/Catalogo.pdf"><img src="/img/logo/honeywell-logo.png" style="width: 24px; height: 24px;"> - Honeywell</a></li>
@@ -230,12 +299,18 @@
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/ob41zey548mvy4u/Catalogo.pdf"><img src="/img/logo/msa-logo.png" style="width: 24px; height: 24px;"> - MSA</a></li>    
                                       
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
 
 
                    <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Toallitas y Limpiadores</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/hslvxw7hkrwo7qc/Catalogo.pdf"><img src="/img/logo/gojo-logo.png" style="width: 24px; height: 24px;"> - Gojo</a></li>
@@ -245,11 +320,17 @@
 
                                       
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>  
 
 
                      <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Stress Termico</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/6goes5gzcxl1trp/Catalogo.pdf"><img src="/img/logo/coleman-logo.png" style="width: 24px; height: 24px;"> - Coleman</a></li>
@@ -260,80 +341,132 @@
 
                                       
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>  
 
 
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Absorventes</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/rhw9rni3pjhx7hd/Catalogo.pdf"><img src="/img/logo/3m-logo.png" style="width: 24px; height: 24px;"> - 3M</a></li>
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
+
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Almacenamiento Peligroso</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/ieicpk33jg3affp/Catalogo.pdf"><img src="/img/logo/3m-logo.png" style="width: 24px; height: 24px;"> - Justrite</a></li>
-                     
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
                  <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Duchas y lavaojos</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/veuiybvrd8nlq12/Catalogo.pdf"><img src="/img/logo/guardian-logo.png" style="width: 24px; height: 24px;"> - Guardian</a></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/mkvkpw4xsae8wvi/Catalogo.pdf"><img src="/img/logo/honeywell-logo.png" style="width: 24px; height: 24px;"> - Honeywell</a></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/xydfn9acdr8hg5h/Catalogo.pdf"><img src="/img/logo/visionaid-logo.png" style="width: 24px; height: 24px;"> - Visionaid</a></li>
+
                      
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
                      <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Ergonomia</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/ui83yl114gimpdi/Catalogo.pdf"><img src="/img/logo/ergodyne-logo.png" style="width: 24px; height: 24px;"> - Ergodyne</a></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/ao5h7jp29w9fufh/Catalogo.pdf"><img src="/img/logo/occunomix-logo.png" style="width: 24px; height: 24px;"> - Occunomix</a></li>
                                       
                     </ul>
+                    <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
 
                   </li>
                    <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Espacios Confinados</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/nuyc02tz5y0aa8r/Catalogo.pdf"><img src="/img/logo/allegro-logo.png" style="width: 24px; height: 24px;"> - Allegro</a></li>
                     
                                       
                     </ul>
+
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>      
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Etiquetado y Bloqueo</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/daoxscm5d8d0yoz/Catalogo.pdf"><img src="/img/logo/honeywell-logo.png" style="width: 24px; height: 24px;"> - Honeywell</a></li>
                     
                                       
                     </ul>
+
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
                   <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Identificacion</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/3zy87kijtss3vqe/Catalogo.pdf"><img src="/img/logo/accuformsigns-logo.png" style="width: 24px; height: 24px;"> - Accuform Signs</a></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/6ndgfel8geezpy0/Catalogo.pdf"><img src="/img/logo/vital-logo.png" style="width: 24px; height: 24px;"> - Vital</a></li>
                     
-                                      
+
                     </ul>
+
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Linternas</a>
+                     <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="#"><img src="/img/logo/energizer-logo.png" style="width: 24px; height: 24px;"> - Energizer</a></li>
@@ -342,10 +475,16 @@
                     
                                       
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>  
 
                     <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Primero Auxilios</a>
+                    <%if user_signed_in? %>
                     <ul class="dropdown-menu">
                       <li></li>
                       <li><a tabindex="-1" href="https://www.dropbox.com/s/eceah1l5wtl14i3/Catalogo.pdf"><img src="/img/logo/north-logo.png" style="width: 24px; height: 24px;"> - North</a></li>
@@ -353,6 +492,11 @@
                     
                                       
                     </ul>
+                     <% else %>
+                    <ul class="dropdown-menu">
+                       <li><p class="text-center text-error"><strong>Regístrate</strong> <small><span class="muted">para ver mas información</span> </small></p></li>
+                    </ul>
+                    <% end %>
                   </li>
 
             
