@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_many :quote
 
-  validates :cargo, :nombre, :name_empresa, :telefono, :celular, :email, :password, :password_confirmation, :presence => true
-  validates :email, :uniqueness => true
+  validates_presence_of :cargo, :nombre, :name_empresa, :telefono, :celular, :email, :password, :password_confirmation
 
 end
