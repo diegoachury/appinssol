@@ -41,8 +41,9 @@ class QuotesController < ApplicationController
   # POST /quotes
   # POST /quotes.json
   def create
-    @quote = Quote.new(params[:quote])
-    @quote.user_id = current_user.id if current_user
+    
+    @quote = current_user.quote.build(params[:quote])
+    
     #@quote = @quote.user
 
     respond_to do |format|
