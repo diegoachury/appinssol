@@ -2,8 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-  hello_world: "Hello world!"
-  hello_flash: "Hello flash!"
+
   home: "INICIO"
   company: "COMPAÑIA"
   servicio: "SERVICIOS"

@@ -30,6 +30,7 @@
         <% if user_signed_in? %>
         <%= current_user.nombre %>, <%= current_user.name_empresa %> | <%= link_to t("perfil"), edit_user_registration_path %> |
           <%= link_to t("logout"), logout_path %>
+           <%= link_to '<img src="/img/colombia.png">'.html_safe,  :locale => :es %> ||  <%= link_to '<img src="/img/usa.png">'.html_safe,  :locale => :en %>
           <% else %>
           
              <%= link_to t("registrar"), registrar_path %> |
