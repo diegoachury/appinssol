@@ -10,13 +10,13 @@
                     <a class="brand" href="#"><img src="/img/logo.png"></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li><%= link_to "INICIO", inicio_path, :class => "menu" %></li>
-                            <li><%= link_to "COMPAÑIA", company_path, :class => "menu" %></li>
-                            <li><%= link_to "SERVICIOS", servicios_path, :class => "menu" %></li>
-                            <li><%= link_to "GESTION", gestion_path, :class => "menu" %></li>
-                            <li><%= link_to "CONTACTO", contacto_path, :class => "menu" %></li>
+                            <li><%= link_to t("home"), inicio_path, :class => "menu" %></li>
+                            <li><%= link_to t("company"), company_path, :class => "menu" %></li>
+                            <li><%= link_to t("servicio"), servicios_path, :class => "menu" %></li>
+                            <li><%= link_to t("gestion"), gestion_path, :class => "menu" %></li>
+                            <li><%= link_to t("contacto"), contacto_path, :class => "menu" %></li>
                             <% if user_signed_in? %>
-                            <li><%= link_to "COTIZAR", cotizar_path, :class => "menu" %></li>
+                            <li><%= link_to t("cotizar"), cotizar_path, :class => "menu" %></li>
                             <li><img src="/img/clic.gif"></li>
 
                            <%end%>
@@ -25,14 +25,17 @@
                        <p class="navbar-text pull-right">
                         <% if admin_signed_in? %>
                         <%= link_to 'Perfil', edit_admin_registration_path %> |
-          <%= link_to 'Cerrar sesión', destroy_admin_session_path, :method => :delete %>
+          <%= link_to t("logout"), destroy_admin_session_path, :method => :delete %>
         <% else %>
         <% if user_signed_in? %>
-        <%= current_user.nombre %>, <%= current_user.name_empresa %> | <%= link_to 'Perfil', edit_user_registration_path %> |
-          <%= link_to 'Cerrar sesión', logout_path %>
+        <%= current_user.nombre %>, <%= current_user.name_empresa %> | <%= link_to t("perfil"), edit_user_registration_path %> |
+          <%= link_to t("logout"), logout_path %>
           <% else %>
-             <%= link_to "Registrar", registrar_path %> |
-          <%= link_to "Iniciar", login_path %> 
+          
+             <%= link_to t("registrar"), registrar_path %> |
+          <%= link_to t("iniciar"), login_path %>
+          <%= link_to '<img src="/img/colombia.png">'.html_safe,  :locale => :es %> ||  <%= link_to '<img src="/img/usa.png">'.html_safe,  :locale => :en %>
+ 
 
 
                       </p>

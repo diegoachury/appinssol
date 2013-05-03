@@ -11,7 +11,7 @@ body{
 <%= simple_form_for(@contact) do |f| %>
   <%= f.error_notification %>
 <fieldset>
-  <legend><h1>Contactenos</h1></legend>
+  <legend><h1><%=t :contacto_titulo %></h1></legend>
   <div class="row">
     <div class="span12">
    
@@ -24,11 +24,11 @@ body{
           Calle 11 # 2- 15<br>
           <strong>Neiva, Huila</strong> <br>
           <abbr title="Phone">Telefax:</abbr> (8)713562 - (8)711922
-          <abbr title="movil">Celular:</abbr> 3166948379
+          <abbr title="movil"><%=t :celular %></abbr> 3166948379
         </address>
  
         <address>
-          <strong>Correo Electronico</strong><br>
+          <strong><%=t :correo %></strong><br>
           <a href="mailto:#">comercial@inssol.com.co</a>
         </address>
       </div>
@@ -40,7 +40,7 @@ body{
           Cra 13 # 17 - 46<br>
           <strong>Bogotá D.C, Cundinamarca</strong>  <br>
           <abbr title="Phone">Telefax:</abbr> 3420442 - 5666981
-          <abbr title="movil">Celular:</abbr> 3168752386
+          <abbr title="movil"><%=t :celular %>Celular:</abbr> 3168752386
         </address>
  
       </div>
@@ -50,7 +50,7 @@ body{
     </div>
     
     <div class="span3 post_block">
-        <p>Cuentanos como te podemos ayudar</p>
+        <p><%=t :contacto_msj %></p>
         <%= f.input :nombre, label: false, placeholder: 'Nombre completo'%>
             <%= f.input :email, label: false, placeholder: 'Correo Electronico'%>
             <%= f.input :direccion, label: false, placeholder: 'direccion' %>

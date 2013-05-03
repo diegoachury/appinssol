@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
+
   def index
   	  @customers = Customer.all
   	  @welcomes = 	Welcome.all
+      flash[:notice] = t(:hello_flash)
+      
 
   	
   end

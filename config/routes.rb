@@ -1,10 +1,13 @@
 Appinssol::Application.routes.draw do
+  
+
+
   resources :quotes
-  get 'cotizar', to: 'quotes#new', as: :cotizar
+  
 
 
   resources :contacts
-      get 'contacto', to: 'contacts#new', as: :contacto
+      
 
 
   devise_for :users
@@ -39,7 +42,17 @@ Appinssol::Application.routes.draw do
     get 'gestion', to: 'home#gestion', as: :gestion
         get "home/gestion"    
 
-  root :to => 'home#index'
+  scope '(:locale)' do
+  get 'inicio', to: 'home#index', as: :inicio
+    get 'servicios', to: 'home#servicio', as: :servicios
+    get 'company', to: 'home#company', as: :company
+    get 'gestion', to: 'home#gestion', as: :gestion
+    get 'cotizar', to: 'quotes#new', as: :cotizar
+    get 'contacto', to: 'contacts#new', as: :contacto
+    root :to => 'home#index'
+  end
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -3,7 +3,7 @@
 <%= simple_form_for(@quote) do |f| %>
   <%= f.error_notification %>
 <fieldset>
-  <legend><h1>Cotizar producto</h1></legend>
+  <legend><h1><%=t :cotizar_titulo %></h1></legend>
   <div class="row">
     <div class="span12">
    
@@ -16,11 +16,11 @@
           Calle 11 # 2- 15<br>
           <strong>Neiva, Huila</strong> <br>
           <abbr title="Phone">Telefax:</abbr> (8)713562 - (8)711922
-          <abbr title="movil">Celular:</abbr> 3166948379
+          <abbr title="movil"><%=t :celular %></abbr> 3166948379
         </address>
  
         <address>
-          <strong>Correo Electronico</strong><br>
+          <strong><%=t :correo %></strong><br>
           <a href="mailto:#">comercial@inssol.com.co</a>
         </address>
       </div>
@@ -32,7 +32,7 @@
           Cra 13 # 17 - 46<br>
           <strong>Bogotá D.C, Cundinamarca</strong>  <br>
           <abbr title="Phone">Telefax:</abbr> 3420442 - 5666981
-          <abbr title="movil">Celular:</abbr> 3168752386
+          <abbr title="movil"><%=t :celular %></abbr> 3168752386
         </address>
  
         
@@ -44,7 +44,7 @@
     
     <div class="span3 post_block">
 
-      <p>Escribe la mayor información acerca del producto que quiere que coticemos como marca, referencia, cantidad etc.</p>
+      <p><%=t :cotizar_msj %></p>
 
 
             <%= f.input :comentario, label: false, placeholder: 'Escribe aqui: Descripción, Referencia, Marca, Cantidad, etc.', :input_html => { :rows => 5 }  %>

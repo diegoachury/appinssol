@@ -10,7 +10,7 @@ body{
 <div class="container">
 <div class="row">
   <div class="span12">
-    <h4>Nuestra Compañia</h4>
+    <h4><%=t :company_titulo %></h4>
     <div class="articulo">
     <div class="row">
       <div class="span6">
@@ -19,8 +19,8 @@ body{
                 <img  src="/img/ico-3.png">
               </div>
               <div class="media-body">
-                <h4 class="media-heading">Mision</h4>
-               Suministrar, elementos de protección personal y equipos que cumplan estándares de calidad nacionales e internacionales que conserven la salud, la seguridad y el medio ambiente contribuyendo al mejoramiento de la calidad de vida en actividades que involucren riesgos para la salud y el bienestar físico, generando valor a los accionistas, colaboradores y aliados estratégicos.
+                <h4 class="media-heading"><%=t :company_mision %></h4>
+              <%=t :mision_decripcion %>
               </div>
             </div>
             <hr>
@@ -30,8 +30,8 @@ body{
                 <img src="/img/ico-2.png">
               </div>
               <div class="media-body">
-                <h4 class="media-heading">Vision</h4>
-                Ser reconocida en el año 2020 como la principal comercializadora integral de equipos- herramientas y elementos de protección personal, proporcionando fidelización, respaldo y confianza en nuestros clientes con suministros, servicios, y asesorías de calidad en lo relacionado con la salud, la seguridad y el medio ambiente.
+                <h4 class="media-heading"><%=t :company_vision %></h4>
+                <%=t :vision_description %>
               </div>
             </div>
 
@@ -40,7 +40,7 @@ body{
         </div>
         <!--otra columna-->
       <div class="span6">
-        <h4>Valores corporativos</h4>
+        <h4> <%=t :valores %></h4>
         <br>
         <div class="row">
           <div class="span3">
@@ -50,8 +50,8 @@ body{
                 <img  src="/img/ico-4.png">
               </div>
               <div class="media-body">
-                <h5 class="media-heading">Proposito</h5>
-                <small>Tener objetivos y metas, claros alcanzables y medibles.</small>
+                <h5 class="media-heading"><%=t :proposito_titulo %></h5>
+                <small><%=t :proposito_description %></small>
               </div>
             </div>
             <hr>
@@ -61,8 +61,8 @@ body{
                 <img  src="/img/ico-4.png">
               </div>
               <div class="media-body">
-                <h5 class="media-heading">Disciplina</h5>
-                <small>Determinación de un código de conducta hacia lo que quiero.</small>
+                <h5 class="media-heading"><%=t :disiplina_titulo %></h5>
+                <small><%=t :disiplina_description %></small>
               </div>
             </div>
 
@@ -72,8 +72,8 @@ body{
                 <img  src="/img/ico-4.png">
               </div>
               <div class="media-body">
-                <h5 class="media-heading">Entusiasmo</h5>
-                <small>Dios esta dentro de mi.</small>
+                <h5 class="media-heading"><%=t :entusiasmo_titulo %></h5>
+                <small><%=t :entusiasmo_description %></small>
               </div>
             </div>
 
@@ -87,8 +87,8 @@ body{
                 <img  src="/img/ico-4.png">
               </div>
               <div class="media-body">
-                <h5 class="media-heading">Organización</h5>
-                <small>Tener objetivos y metas, claros alcanzables y medibles.</small>
+                <h5 class="media-heading"><%=t :organizacion_titulo %></h5>
+                <small><%=t :organizacion_description %></small>
               </div>
             </div>
 
@@ -99,8 +99,8 @@ body{
                 <img  src="/img/ico-4.png">
               </div>
               <div class="media-body">
-                <h5 class="media-heading">Responsabilidad</h5>
-                <small>Cumplir con lo prometido oportunamente y con calidad.</small>
+                <h5 class="media-heading"><%=t :responsabilidad_titulo %></h5>
+                <small><%=t :responsabilidad_description %></small>
               </div>
             </div>
 
@@ -127,7 +127,7 @@ body{
 <div class="articulo">
   	<div class="well">
   		<fieldset>
-  			<legend>Clientes, que han optado por nuestras soluciones:</legend>
+  			<legend><%=t :company_clientes %></legend>
   			     <ul class="thumbnails">
                 <% @customers.each do |customer| %>
                 <li class="span2" style="width: 123px; height: 44px;">

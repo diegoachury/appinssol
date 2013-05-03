@@ -33,7 +33,7 @@ h2 {
 					
 			<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html:{class: "well"}) do |f| %>
 			<fieldset>
-						<legend><h2>Iniciar sesión</h2></legend>
+						<legend><h2><%=t :iniciar %></h2></legend>
 
     			<%= f.input :email, label: 'Correo Electronico', :required => false, :autofocus => true %>
     			<%= f.input :password,label: 'Contraseña', :required => false %>
@@ -53,7 +53,7 @@ h2 {
 				<div class="span6 offset2" style="padding-top: 30px;">
 					<h1>INSSOL SAS</h1>
 					<blockquote>
-						<h2>Somos Lideres en soluciones de servicios integrales con operacion en todo el pais.</h2>
+						<h2><%=t :description_login %></h2>
 					</blockquote>
 				</div>
 			</div>
