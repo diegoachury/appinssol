@@ -1,0 +1,44 @@
+
+<p>Gracias por contactarnos</p>
+<br>
+<table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><img src="/img/bandera.png"></th>
+                  <th style="background-color: #F0F0F0;" colspan="2">INSSOL SAS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                   <td></td>
+                  <td><strong>Nombre:</strong> </td>
+                  <td><%= @contacto.nombre %></td>
+                </tr>
+                  <tr>
+                    <td></td> 
+                    <td><strong>Correo Electronico:</strong></td>
+                    <td><%= @contacto.email %></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                    <td><strong>Direccion:</strong> </td>
+                    <td> <%= @contacto.direccion %></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                    <td><strong>Ciudad:</strong></td>
+                    <td><%= @contacto.ciudad %> </td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                    <td><strong>Telefono:</strong> </td>
+                    <td><%= @contacto.telefono %></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                    <td><strong>Solicitud:</strong></td>
+                    <td><%= @contacto.comentario %></td>
+                  </tr>
+                  
+              </tbody>
+            </table>
