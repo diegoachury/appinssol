@@ -2,6 +2,12 @@ Appinssol::Application.routes.draw do
   
 
 
+  get "panel/index"
+get "users/index"
+
+#match '/users/:id', :to => 'users#show',    :as => :user,         :via => :get
+match '/users/:id', :to => 'users#destroy', :as => :destroy_user, :via => :delete
+
   resources :quotes
   
 
@@ -19,6 +25,15 @@ Appinssol::Application.routes.draw do
   end
  
   devise_for :admins
+devise_scope :admin do
+   
+    get 'lubu', to: 'devise/sessions#new', as: :login
+    
+  end
+
+namespace :admin do
+root :to => "panel#index"
+end
 
   resources :welcomes
 

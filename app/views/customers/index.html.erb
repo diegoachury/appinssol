@@ -1,8 +1,9 @@
-<h1>Listing customers</h1>
+<div class="container">
+  <h1>Listado de Clientes</h1>
 
-<table>
+<table class="table table-bordered">
   <tr>
-    <th>Name</th>
+    <th>Nombre del Cliente</th>
     <th>Url photo</th>
     <th></th>
     <th></th>
@@ -12,14 +13,18 @@
 <% @customers.each do |customer| %>
   <tr>
     <td><%= customer.name %></td>
-    <td><%= customer.url_photo %></td>
-    <td><%= link_to 'Show', customer %></td>
-    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-    <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><img src="<%= customer.url_photo %>" style="width: 100px;
+height: 64px;"></td>
+    <td><%= link_to 'Ver', customer %></td>
+    <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
+    <td><%= link_to "Eliminar", customer, :data => { :confirm => "Are you sure?" }, :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to 'Nuevo Cliente', new_customer_path %>
+
+
+</div>

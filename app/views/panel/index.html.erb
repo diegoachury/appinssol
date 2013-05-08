@@ -1,0 +1,76 @@
+<style>
+
+.tr {
+  font-size: 12px;
+  color: #b06206;
+}
+.tr_body{
+  font-size: 11px;
+
+}
+
+</style>
+<div class="container">
+
+  <h1>Panel vista rapida</h1>
+<p>Find me in app/views/panel/index.html.erb</p>
+<div class="row">
+  <div class="span12">
+
+    <div class="row">
+      <div class="span6">
+        <table class="table table-bordered">
+          <caption> Ultimos Usuarios Registrados</caption>
+  <tr class="tr">
+    <th>Nombre</th>
+    <th>Email</th>
+    <th># conexion</th>
+    <th>Fecha Creacion</th> 
+    <th>Ultima conexion</th>
+
+  </tr>
+
+<% @users.each do |user| %>
+  <tr class="tr_body">
+    <td><%= user.nombre %></td>
+    <td><%= user.email %></td>
+    <td><%= user.sign_in_count %></td>
+    <td><%= user.created_at %></td>
+    <td><%= user.last_sign_in_at %></td>  
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+ 
+
+      </div>
+      <div class="span6">
+         <table class="table table-bordered">
+          <caption> Ultimos Contactos Registrados</caption>
+  <tr class="tr">
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Solicitud</th>
+    <th>Fecha Creacion</th> 
+
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr class="tr_body">
+    <td><%= contact.nombre %></td>
+    <td><%= contact.email %></td>
+     <td><%= contact.comentario %></td>
+    <td><%= contact.created_at %></td>
+  </tr>
+<% end %>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

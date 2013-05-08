@@ -1,0 +1,61 @@
+<style>
+
+.tr {
+	font-size: 12px;
+	color: #b06206;
+}
+.tr_body{
+	font-size: 11px;
+
+}
+
+</style>
+<h1>Panel#index</h1>
+<p>Find me in app/views/panel/index.html.erb</p>
+<table class="table table-bordered">
+  <tr class="tr">
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Pais</th>
+    <th>Ciudad</th>
+    <th>Empresa</th>
+    <th>Direccion Empresa</th>
+    <th>Nit</th>
+    <th>Genero</th>
+    <th>Telefono</th>
+    <th>Celular</th>
+    <th>Email</th>
+    <th># veces de conexion</th>
+    <th>Fecha de Creacion</th>
+    
+    <th>ultima conexion</th>
+
+  </tr>
+
+<% @users.each do |user| %>
+  <tr class="tr_body">
+    <td><%= user.nombre %></td>
+    <td><%= user.apellido %></td>
+    <td><%= user.pais %></td>
+    <td><%= user.ciudad %></td>
+    <td><%= user.name_empresa %></td>
+    <td><%= user.address_empresa %></td>
+    <td><%= user.nit %></td>
+    <td><%= user.genero %></td>
+    <td><%= user.telefono %></td>
+    <td><%= user.celular %></td>
+    <td><%= user.email %></td>
+    <td><%= user.sign_in_count %></td>
+    <td><%= user.created_at %></td>
+    
+     <td><%= user.last_sign_in_at %></td>
+     
+  
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
