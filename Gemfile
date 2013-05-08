@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+#gem 'rails', '3.2.12'
+gem 'rails', '3.2.18'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,7 +11,7 @@ group :development, :test do
 end
 group :production do
 	gem 'pg'
-	gem 'rails', '3.2.18'
+
 
 end
 
