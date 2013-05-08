@@ -10,6 +10,7 @@ group :development, :test do
 end
 group :production do
 	gem 'pg'
+	gem 'rails', '3.2.18'
 
 end
 
