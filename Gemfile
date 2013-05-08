@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'heroku'
 gem 'google-analytics-rails'
+gem 'newrelic_rpm'
 
 
 # Gems used only for assets and not required
