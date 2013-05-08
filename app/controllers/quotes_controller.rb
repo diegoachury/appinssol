@@ -1,5 +1,7 @@
 class QuotesController < ApplicationController
-  before_filter :authenticate_user!
+  #lo desabilito para realizar pruebas
+  before_filter :authenticate_user!, :only => [:new, :create]
+   before_filter :authenticate_admin!, :only => [:index, :show]
   # GET /quotes
   # GET /quotes.json
   def index
