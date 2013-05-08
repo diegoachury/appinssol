@@ -120,8 +120,8 @@ transition: opacity .2s;
                 <ul class="dropdown-menu">
                   <li class="nav-header">Li</li>
                   
-             	  <li><a href="#about">Contactos</a></li>
-              	  <li><a href="#contact">Cotizaciones</a></li>
+             	  <li><%= link_to 'Contactos Registrados', contacts_path %></li>
+              	  <li><%= link_to 'Cotizaciones Registradas', customers_path %></li>
                 </ul>
               </li>
                <li><%= link_to 'Usuarios Registrados', users_index_path %></li>
