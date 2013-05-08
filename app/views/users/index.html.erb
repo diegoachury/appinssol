@@ -10,7 +10,7 @@
 }
 
 </style>
-<h1>Panel#index</h1>
+<h1>User#index</h1>
 <p>Find me in app/views/panel/index.html.erb</p>
 <table class="table table-bordered">
   <tr class="tr">
@@ -29,6 +29,7 @@
     <th>Fecha de Creacion</th>
     
     <th>ultima conexion</th>
+    <th></th>
 
   </tr>
 
@@ -49,6 +50,7 @@
     <td><%= user.created_at %></td>
     
      <td><%= user.last_sign_in_at %></td>
+     <td><%= link_to "delete", user, :method => :delete, :confirm => "You sure?" %></td>
      
   
   </tr>
