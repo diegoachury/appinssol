@@ -1,50 +1,45 @@
 <style>
 body {
     background: url(/img/fondo_r.jpg);
-            background-size:100% 120%;
+            background-size:120% 120%;
             background-repeat:no-repeat; 
 }
 
 </style>
-       
-            <div class="row-fluid">   
-                <div class="span3"><!--margen izquierda-->
-                    <div class="pull-right" style="padding-top: 10px;"><%= render 'nav' %>
-                        <h5><%=t :aliados %></h5>
-                        <img src="/img/logo.png" style="width: 114px; height: 34px;">
-
-                    </div>
-                    
-
-                </div><!-- finaliza margen izquierda-->
-            <div class="span6"><!-- margen central-->
-            	<%= render 'carrusel' %><!-- finaliza carrusel-->
-            </div><!-- finaliza margen central-->
-            <div class="span3" id="perfil" style="padding-top:40px;">
-                
-            	<h1 id="titulo"><%=t :titulo %></h1>
-                <hr>
-            	<p><strong><%=t :descripcion %></strong><br>
-                    <br>
-                    <%= link_to t("registrar"), registrar_path, :class =>"btn btn-large btn-warning" %>
-                   <%= link_to t("iniciar"), login_path, :class => "btn btn-large btn-primary" %>
-            	</p>
-                 
-                  
-                 
-                 
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3"><!--margen izquierda-->
+            <div>
+                <%= render 'nav' %>
+                <h5><%=t :aliados %></h5>
+                <img src="/img/aliado-1.png" style="width: 114px; height: 34px;">
             </div>
+        </div><!-- finaliza margen izquierda-->
+        <div class="span6"><!-- margen central-->
+            <%= render 'carrusel' %><!-- finaliza carrusel-->
+        </div><!-- finaliza margen central-->
+        <div class="span3" id="perfil">
+            <h1 id="titulo"><%=t :titulo %></h1>
+            <hr>
+            <p><strong><%=t :descripcion %></strong><br>
+                <br>
+                <%= link_to t("registrar"), registrar_path, :class =>"btn btn-large btn-warning" %>
+                <%= link_to t("iniciar"), login_path, :class => "btn btn-large btn-primary" %>
+            </p>
         </div>
-    <div class="span12">
-                    <h3><%=t :clientes %></h3>
-                     <ul class="thumbnails">
+        <div class="span12">
+            <h3><%=t :clientes %></h3>
+            <ul class="thumbnails">
                 <% @customers.each do |customer| %>
                 <li class="span2" style="width: 85px; height: 44px;">
                     <a href="#" class="thumbnail">
                         <img src="<%= customer.url_photo %>" ></a>
                     </li>
                     <% end %>
-                </ul></div>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
