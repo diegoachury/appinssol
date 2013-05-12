@@ -37,7 +37,7 @@ h2 {
 
 					<%= f.input :pais, label: false, collection: [ "United States", "Canada", "Argentina", "Brazil", "Chile", "Colombia", "Mexico", "Peru", "Austria", "Belgium", "Croatia", "Czech Republic", "Denmark", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", "Slovakia", "Spain", "Sweden", "Switzerland", "Ukraine", "United Kingdom", "Egypt", "Ghana", "Israel", "Kenya", "Morocco", "Nigeria", "Senegal", "South Africa", "Turkey", "Uganda", "United Arab Emirates", "Australia", "China", "Hong Kong", "India", "Indonesia", "Japan", "Korea", "Malaysia", "New Zealand", "Philippines", "Singapore", "Taiwan", "Thailand"], prompt: "Selecciona el Pais"%>
 					<%= f.input :name_empresa, label: false, placeholder: 'Nombre de la Empresa'  %>
-					<%= f.input :telefono, label: false, placeholder: 'Numero Telefonico' %>
+					<%= f.input :tel, :as => :float, label: false, placeholder: 'Numero Telefonico' %>
 					
 					
 				</div>
