@@ -1,19 +1,5 @@
 <style>
-#main-navbar .navbar-inner {
-background: #418ce4;
-border-bottom: 1px solid #185aa7;
--webkit-box-shadow: rgba(255,255,255,0.25) 0 1px 0 inset;
--moz-box-shadow: rgba(255,255,255,0.25) 0 1px 0 inset;
-box-shadow: rgba(255,255,255,0.25) 0 1px 0 inset;
-background-color: #4ba0e9;
-background-image: -moz-linear-gradient(top,#52aded,#418ce4);
-background-image: -webkit-gradient(linear,0 0,0 100%,from(#52aded),to(#418ce4));
-background-image: -webkit-linear-gradient(top,#52aded,#418ce4);
-background-image: -o-linear-gradient(top,#52aded,#418ce4);
-background-image: linear-gradient(to bottom,#52aded,#418ce4);
-background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52aded',endColorstr='#ff418ce4',GradientType=0);
-}
+
 #main-navbar .nav>li>a, #main-navbar .messages>li>a {
 color: #fff;
 display: block;
@@ -39,7 +25,7 @@ transition: opacity .2s;
 
 
 
-<div class="navbar navbar-fixed-top" id="main-navbar">
+<div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -49,12 +35,19 @@ transition: opacity .2s;
           </button>
           <a class="brand" href="#">Admin-Lubu</a>
           <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              <%= link_to 'Perfil', edit_admin_registration_path %>|| <%= link_to t("logout"), destroy_admin_session_path, :method => :delete %>
-            </p>
+              <div class="btn-group pull-right">
+                <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> Administrador</a>
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to  '<i class="icon-book"></i> Perfil'.html_safe, edit_admin_registration_path %></li>
+                  <li><%= link_to '<i class="icon-off"></i> Cerrar sesion'.html_safe, destroy_admin_session_path, :method => :delete %></li>
+                </ul>
+              </div>
+          <!--
+              <%= link_to  '<img src="/img/icons/user.png" style="width: 32px; height: 32px;">Perfil'.html_safe, edit_admin_registration_path %>|| <%= link_to '<img src="/img/icons/unlock.png" style="width: 32px; height: 32px;">'.html_safe, destroy_admin_session_path, :method => :delete %>-->
             <ul class="nav">
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sitio Web <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-globe icon-white "></i> Sitio Web <b class="caret"></b></a>
                 <ul class="dropdown-menu">
 
                 	<li class="dropdown-submenu">
@@ -65,66 +58,18 @@ transition: opacity .2s;
                     </ul>
                   </li>
 
-                  <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Index</a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                   		<li><%= link_to 'Nuevo Clientes', new_customer_path %></li>
-                  		<li><%= link_to 'Listado Clientes', customers_path %></li>
-                    </ul>
-                  </li>
-
-                  <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Compañia</a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                   		<li><%= link_to 'Nuevo Clientes', new_customer_path %></li>
-                  		<li><%= link_to 'Listado Clientes', customers_path %></li>
-                    </ul>
-                  </li>
-
-                  <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Servicios</a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                   		<li><%= link_to 'Nuevo Clientes', new_customer_path %></li>
-                  		<li><%= link_to 'Listado Clientes', customers_path %></li>
-                    </ul>
-                  </li>
-
-                  <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Gestion</a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                   		<li><%= link_to 'Nuevo Clientes', new_customer_path %></li>
-                  		<li><%= link_to 'Listado Clientes', customers_path %></li>
-                    </ul>
-                  </li>
-
-                  <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Contacto</a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                   		<li><%= link_to 'Nuevo Clientes', new_customer_path %></li>
-                  		<li><%= link_to 'Listado Clientes', customers_path %></li>
-                    </ul>
-                  </li>
-
-                  <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Cotizar</a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                   		<li><%= link_to 'Nuevo Clientes', new_customer_path %></li>
-                  		<li><%= link_to 'Listado Clientes', customers_path %></li>
-                    </ul>
-                  </li>
-
                 </ul>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Seguimiento <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li class="nav-header">Li</li>
-                  
-             	  <li><%= link_to 'Contactos Registrados', contacts_path %></li>
-              	  <li><%= link_to 'Cotizaciones Registradas', quotes_path %></li>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-bell icon-white"></i> Seguimiento <b class="caret"></b></a>
+                <ul class="dropdown-menu">                  
+             	  <li><%= link_to '<i class="icon-envelope"></i> Contacto'.html_safe, contacts_path %></li>
+              	  <li><%= link_to '<i class=" icon-file"></i> Contizaciones'.html_safe, quotes_path %></li>
+                   <li><%= link_to '<i class=" icon-user"></i> Usuarios'.html_safe, users_index_path %></li>
                 </ul>
               </li>
-               <li><%= link_to 'Usuarios Registrados', users_index_path %></li>
+              
+               <li><%= link_to '<i class="icon-th-large icon-white"></i> Panel'.html_safe, panel_index_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
