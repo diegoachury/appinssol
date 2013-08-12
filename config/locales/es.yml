@@ -104,6 +104,7 @@ es:
   description_empresa: "Es importante para nosotros conocer las necesidades de tu empresa y brindarle la mejor solucion."
   informacion_ingreso: "Datos de Ingreso"
   description_ingreso: "ingresa los datos con los que quieres iniciar en nuestra plataforma."
+  informacion_password: "la contraseña tiene que tener una logitud mínima 8 caracteres"
 
 
 

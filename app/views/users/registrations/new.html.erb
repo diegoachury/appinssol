@@ -47,6 +47,7 @@ h2 {
 					<p class="muted"><small><%=t :description_ingreso %></small></p>
 
 					<%= f.input :email, :required => true, :autofocus => true, label: false, placeholder: 'Correo Electronico' %>
+					<p class="muted"><small><%=t :informacion_password %></small></p>
     				<%= f.password_field :password, :placeholder => 'Contraseña' %>
     				<%= f.input :password_confirmation, :required => true, label: false, placeholder: 'Confirmar Contraseña' %>
 				</div>

@@ -104,6 +104,7 @@ en:
   description_empresa: "It is important for us to know the needs of your company and provide the best solution."
   informacion_ingreso: "Join Data"
   description_ingreso: "enters the data you want to start on our platform."
+  informacion_password: "the password must be 8 characters minimum length"
 
 
 
