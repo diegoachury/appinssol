@@ -1,0 +1,21 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :codigo_interno %>
+    <%= f.input :codigo_externo %>
+    <%= f.input :nombre %>
+    <%= f.input :talla %>
+    <%= f.input :color %>
+    <%= f.input :ficha_tecnica %>
+    <%= f.input :ficha_produccion %>
+    <%= f.input :descripcion %>
+    <%= f.input :marca %>
+    <%= f.input :referencia_marca %>
+    <%= f.association :category %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

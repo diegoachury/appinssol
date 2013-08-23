@@ -1,4 +1,3 @@
 class Category < ActiveRecord::Base
-  attr_accessible :descripcion, :name, :photo
-  has_many :type 
+  attr_accessible :codigo, :descripcion, :imagen, :nombre
 end

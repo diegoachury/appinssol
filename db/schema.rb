@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130512200908) do
+ActiveRecord::Schema.define(:version => 20130823155525) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -44,9 +44,10 @@ ActiveRecord::Schema.define(:version => 20130512200908) do
   add_index "brands", ["type_id"], :name => "index_brands_on_type_id"
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.string   "descripcion"
-    t.string   "photo"
+    t.string   "codigo"
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.string   "imagen"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -71,6 +72,24 @@ ActiveRecord::Schema.define(:version => 20130512200908) do
   end
 
   add_index "customers", ["welcome_id"], :name => "index_customers_on_welcome_id"
+
+  create_table "products", :force => true do |t|
+    t.string   "codigo_interno"
+    t.string   "codigo_externo"
+    t.string   "nombre"
+    t.string   "talla"
+    t.string   "color"
+    t.text     "ficha_tecnica"
+    t.text     "ficha_produccion"
+    t.text     "descripcion"
+    t.string   "marca"
+    t.string   "referencia_marca"
+    t.integer  "category_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "products", ["category_id"], :name => "index_products_on_category_id"
 
   create_table "quotes", :force => true do |t|
     t.string   "nombre"

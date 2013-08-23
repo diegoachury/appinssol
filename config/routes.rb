@@ -2,6 +2,12 @@ Appinssol::Application.routes.draw do
   
 
 
+  resources :categories
+
+
+  resources :products
+
+
   get "panel/index"
 get "users/index"
 
@@ -42,9 +48,6 @@ devise_scope :admin do
 
 
   resources :types
-
-
-  resources :categories
 
 
   get "home/index"

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo_interno: MyString
+  codigo_externo: MyString
+  nombre: MyString
+  talla: MyString
+  color: MyString
+  ficha_tecnica: MyText
+  ficha_produccion: MyText
+  descripcion: MyText
+  marca: MyString
+  referencia_marca: MyString
+  category: 
+
+two:
+  codigo_interno: MyString
+  codigo_externo: MyString
+  nombre: MyString
+  talla: MyString
+  color: MyString
+  ficha_tecnica: MyText
+  ficha_produccion: MyText
+  descripcion: MyText
+  marca: MyString
+  referencia_marca: MyString
+  category: 
