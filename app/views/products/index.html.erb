@@ -1,43 +1,59 @@
-<h1>Listing products</h1>
-
-<table>
-  <tr>
-    <th>Codigo interno</th>
-    <th>Codigo externo</th>
-    <th>Nombre</th>
-    <th>Talla</th>
-    <th>Color</th>
-    <th>Ficha tecnica</th>
-    <th>Ficha produccion</th>
-    <th>Descripcion</th>
-    <th>Marca</th>
-    <th>Referencia marca</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.codigo_interno %></td>
-    <td><%= product.codigo_externo %></td>
-    <td><%= product.nombre %></td>
-    <td><%= product.talla %></td>
-    <td><%= product.color %></td>
-    <td><%= product.ficha_tecnica %></td>
-    <td><%= product.ficha_produccion %></td>
-    <td><%= product.descripcion %></td>
-    <td><%= product.marca %></td>
-    <td><%= product.referencia_marca %></td>
-    <td><%= product.category %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="span6">
+            <div class="row">
+                <div class="span3">
+                    <%=link_to new_product_path, :class =>'btn' do %>
+                    <i class="icon-list-alt"></i>Nuevo Producto
+                    <% end %>
+                      <%=link_to new_category_path, :class =>'btn' do %>
+                    <i class="icon-barcode"></i>Nueva Categoria
+                    <% end %>
+                </div>
+                <div class="span3">
+                    <%= form_tag products_path, :method => 'get' do %>
+                    <div class="input-append">
+                        <%= text_field_tag :search, params[:search] %>
+                         <%= submit_tag "Buscar", :nombre => nil, :class => 'btn' %>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>           
+    <% @products.each do |product| %>
+   <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 84px; height: 84px;" src="<td><%= product.imagen %></td>">
+              </a>
+              <div class="media-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="span2">
+                            <h4 class="media-heading"><%= product.nombre %></h4>
+                            <small><em>(<%= product.category.nombre %>)</em></small>
+                        </div>
+                        <div class="span2">
+                            <strong>Marca: </strong><em><%= product.marca %></em>
+                        </div>
+                        <div class="span2">
+                            <strong>Referencia: </strong><em><%= product.codigo_externo %></em>
+                       </div>
+                       <div class="span2">
+                        <strong>Tallaje: </strong><em><%= product.talla %></em>
+                    </div>
+                        <div class="span2">
+                            <strong>Color: </strong><em><%= product.color %></em>
+                     </div>
+                     <div class="span2">
+                        <%= link_to 'Show', product %>
+                        <%= link_to 'Edit', edit_product_path(product) %>
+                        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                     </div>
+                 </div>
+             </div>
+             <p> <strong>Ficha Tecnica</strong> <%= product.ficha_tecnica %></p>
+         </div>
+     </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Product', new_product_path %>
+</div>
