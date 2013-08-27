@@ -34,7 +34,7 @@ match '/users/:id', :to => 'users#destroy', :as => :destroy_user, :via => :delet
   devise_for :users
 
   devise_scope :user do
-    match 'registrar', to: 'devise/registrations#new', as: :registrar
+    get 'registrar', to: 'devise/registrations#new', as: :registrar
     get 'login', to: 'devise/sessions#new', as: :login
     get 'logout', to: 'devise/sessions#destroy', as: :logout  
   end
