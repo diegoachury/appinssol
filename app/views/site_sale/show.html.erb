@@ -1,25 +1,24 @@
 <p id="notice"><%= notice %></p>
-<div class="container-fluid">
-  <div class="row">
-    <div class="span5">
-      <div class="row">
-        <div class="span1">
+<div class="container-fluid"><!--container -->
+  <div class="row"><!--columnas -->
+    <div class="span5"><!--columna izq -->
+      <div class="row"><!--columna izq interna-->
+        <div class="span1"><!--columna 1 -->
           <%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left'></i> Atras</div>".html_safe,  :controller => "site_sale"%>
-        </div>
-        <div class="span2">
+        </div><!-- cierra columna 1 -->
+        <div class="span2"> <!--columna 2-->
           <p><strong><%= @product.marca %> </strong><em>(<%= @product.referencia_marca %>)</em>
           </p>
-        </div>
-        <div class=" span2 pull-right">
+        </div><!--cierra 2-->
+        <div class=" span2 pull-right"><!--columna 3-->
           <strong>cod: <%= @product.codigo_externo %></strong> 
         </div>
-      </div>      
-      <img src="<%= @product.imagen %>" class="img-rounded" style="width: 460px; height: 470px;">
-      
-    </div>
-    <div class="span10">
+      </div> <!-- cierra columna izq interna-->     
+      <img src="<%= @product.imagen %>" class="img-rounded" style="width: 460px; height: 470px;">    
+    </div><!-- cierra columna izq -->
+    <div class="span6">
       <div class="row">
-        <div class="span5">
+        <div class="span3">
           <p><strong>$59.000 (COP)P</strong></p><br>
           <strong>  <%= @product.nombre %></strong><br>
            <div style="text-align:justify;">
@@ -37,7 +36,7 @@
             <p><%= @product.category.nombre %></p>
           </fieldset> 
         </div>
-        <div class="span5">
+        <div class="span3">
           <table>
             <thead>
               <tr>
@@ -53,5 +52,5 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div><!--columnas -->
+</div><!--container -->
