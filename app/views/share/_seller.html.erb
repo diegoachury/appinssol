@@ -1,5 +1,12 @@
+<style>
+.navbar-inner, .navbar .btn-navbar {
+    background: #f18200; /* Old browsers */
+    }
+    .navbar .nav .active > a, .navbar .nav .active > a:hover {color:white;}
+</style>
+
 <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner1">
+      <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
@@ -8,7 +15,7 @@
           </button>
           <a class="brand" href="#"><img src="/img/logo.png" style="width: 126px; height: 22px;"></a>
           <div class="row">
-            <div class="span6">
+            <div class="span5">
           <div class="nav-collapse collapse">          
                <form class="navbar-form pull-right">
                 <%= form_tag products_path, :method => 'get' do %>
@@ -22,7 +29,7 @@
            
             
           </div><!--/.nav-collapse -->
-          <div class="span5 pull-right">
+          <div class="span4 pull-right">
             <div class="btn-group">
                 <button class="btn btn-primary"><%= current_seller.email %></button>
                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
