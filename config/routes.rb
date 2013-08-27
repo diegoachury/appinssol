@@ -2,6 +2,19 @@ Appinssol::Application.routes.draw do
   
 
 
+  devise_for :sellers
+   devise_scope :seller do
+     get 'virtual', to: 'devise/sessions#new', as: :virtual
+  end
+
+   authenticated :seller do
+      root :to => 'site_sale#index', :as => :admin_root
+    end
+
+  get "site_sale/index"
+    get "site_sale/show"
+    match '/site_sale/:id', :to => 'site_sale#show', :via => :get
+
   resources :categories
 
 

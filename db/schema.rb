@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130824113831) do
+ActiveRecord::Schema.define(:version => 20130827143807) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20130824113831) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "imagen"
+    t.decimal  "precio"
   end
 
   add_index "products", ["category_id"], :name => "index_products_on_category_id"
@@ -109,6 +110,24 @@ ActiveRecord::Schema.define(:version => 20130824113831) do
   add_index "quotes", ["brand_id"], :name => "index_quotes_on_brand_id"
   add_index "quotes", ["type_id"], :name => "index_quotes_on_type_id"
   add_index "quotes", ["user_id"], :name => "index_quotes_on_user_id"
+
+  create_table "sellers", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "sellers", ["email"], :name => "index_sellers_on_email", :unique => true
+  add_index "sellers", ["reset_password_token"], :name => "index_sellers_on_reset_password_token", :unique => true
 
   create_table "types", :force => true do |t|
     t.string   "name"

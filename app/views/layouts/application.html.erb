@@ -14,19 +14,43 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	  <p class="notice"><%= notice %></p>
+
 
  <% if admin_signed_in? %>
- <%= render 'share/admin' %>
-
- <% else %>
- <%= render 'share/menu' %>
- <% end %>	  
-	
-
-
+  <%= render 'share/admin' %>
+<% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
+    <% elsif seller_signed_in?  %>
+      <%= render 'share/seller' %>
+<% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
+    <% else %>
+     <%= render 'share/menu' %>
+<% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
+<% end %> 	  
+<% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>	
 <%= yield %>
-
+<script>
+$('.dropdown-toggle').dropdown();
+</script>
 <script>
 $('#myCollapsible').collapse({
   toggle: false

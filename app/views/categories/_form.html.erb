@@ -1,14 +1,33 @@
-<%= simple_form_for(@category) do |f| %>
+<br>
+<div class="container">
+  <div class="row">
+    <%= simple_form_for(@category) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :codigo %>
-    <%= f.input :nombre %>
-    <%= f.input :descripcion %>
-    <%= f.input :imagen %>
+    <div class="span9">
+      <div class="row">
+        <div class="span4">
+          <div class="form-inputs">
+            <%= f.input :codigo %>
+            <%= f.input :nombre, :label =>'Nombre de categoria' %>
+            <%= f.input :imagen %>
+          </div>
+            <%= f.button :submit, "Guardar" %>
+        </div>
+        <div class="span3">
+          <div class="form-inputs">
+            <span>Descripcion</span>
+            <%= f.text_area :descripcion, :as => :text, :cols =>50, :rows =>10 %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+</div>
 <% end %>
+
+
+
+
+ 
+
+

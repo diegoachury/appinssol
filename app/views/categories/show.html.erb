@@ -1,25 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Codigo:</b>
-  <%= @category.codigo %>
-</p>
-
-<p>
-  <b>Nombre:</b>
-  <%= @category.nombre %>
-</p>
-
-<p>
-  <b>Descripcion:</b>
-  <%= @category.descripcion %>
-</p>
-
-<p>
-  <b>Imagen:</b>
-  <%= @category.imagen %>
-</p>
-
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="container">
+	 <%= render 'share/navpro' %>
+	 <br>
+  <div class="row">
+    <div class="span9">
+    	<p id="notice"><%= notice %></p>
+    	<%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left icon-white'></i> Regresar</div>".html_safe,categories_path %>
+	 		<%= link_to "<div class='btn btn-primary'><i class='icon-pencil icon-white'></i> Editar</div>".html_safe, edit_category_path(@category) %>
+      <div class="row">
+      		 		<br>
+        <div class="span2">
+        	<img src=" <%= @category.imagen %>" style="width: 64px; height: 64px;">
+        </div>
+        <div class="span5">
+        	<span><strong>No Codigo</strong></span>
+          	<p><%= @category.codigo %></p>
+          	 <span><strong>Nombre</strong></span>
+          	 <p><%= @category.nombre %></p>  
+          	 <span><strong>Imagen</strong></span>
+            <span><strong>Descripcion</strong></span>
+            <p><%= @category.descripcion %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

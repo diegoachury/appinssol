@@ -18,11 +18,8 @@ filter: alpha(opacity=100);
 -o-transition: opacity .2s;
 transition: opacity .2s;
 }
+
 </style>
-
-
-
-
 
 
 <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
@@ -66,6 +63,13 @@ transition: opacity .2s;
              	  <li><%= link_to '<i class="icon-envelope"></i> Contacto'.html_safe, contacts_path %></li>
               	  <li><%= link_to '<i class=" icon-file"></i> Contizaciones'.html_safe, quotes_path %></li>
                    <li><%= link_to '<i class=" icon-user"></i> Usuarios'.html_safe, users_index_path %></li>
+                </ul>
+              </li>
+               <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt icon-white"></i> Catalago <b class="caret"></b></a>
+                <ul class="dropdown-menu">                  
+                <li><%= link_to '<i class="icon-list-alt"></i> Registrar Producto'.html_safe, products_path %></li>
+                  <li><%= link_to '<i class="icon-list-alt"></i> Registrar Categoria '.html_safe, categories_path %></li>
                 </ul>
               </li>
               

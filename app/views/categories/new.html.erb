@@ -1,5 +1,16 @@
-<h1>Categoria</h1>
+<div class="container">
+	 <%= render 'share/navpro' %>
+	 <div class="row">
+	 	<div class="span2">
+	 		<br>
+	 		<%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left icon-white'></i> Regresar</div>".html_safe, categories_path %>
+	 	</div>
+	 	<div class="span3">
+	 		<br>
+	 		<h4>Nuevo Categoria</h4>
+	 	</div>
+	 </div>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', categories_path %>

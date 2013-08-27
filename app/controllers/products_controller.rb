@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /products
   # GET /products.json
   def index

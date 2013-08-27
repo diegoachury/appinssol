@@ -11,14 +11,24 @@
  *= require_self
  *= require_tree .
  *= require bootstrap
- *= require bootstrap-responsive
  */
+
+
 body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-                border-radius: 5px 20px 5px;
-     		      
-            }
+	padding-top: 6px;
+	padding-bottom: 40px;
+	border-radius: 5px 20px 5px;
+}
+.foto-perfil{
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.nombre{
+  padding-top: 10px;
+ }
+
 
 
             

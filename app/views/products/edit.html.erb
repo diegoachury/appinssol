@@ -1,6 +1,14 @@
-<h1>Editing product</h1>
-
+<div class="container">
+	 <%= render 'share/navpro' %>
+	 <div class="row">
+	 	<div class="span3">
+	 		<%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left icon-white'></i> Regresar</div>".html_safe, products_path %>
+	 		<%= link_to "<div class='btn btn-primary'><i class='icon-eye-open icon-white'></i> Ver</div>".html_safe, @product %>
+	 	</div>
+	 	<div class="span3">
+	 			 <h4>Editar Producto</h4>
+	 	</div>
+	 </div>
+</div>
+<br>
 <%= render 'form' %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>

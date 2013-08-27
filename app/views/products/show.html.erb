@@ -1,60 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+   <%= render 'share/navpro' %>
+   <br>
+   <div class="row">
+    <div class="span12">
+      <%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left icon-white'></i> Regresar</div>".html_safe,products_path %>
+      <%= link_to "<div class='btn btn-primary'><i class='icon-pencil icon-white'></i> Editar</div>".html_safe, edit_product_path(@product) %>
+      <div class="row">
+        <br>
+        <div class="span3">
+          <img src=" <%= @product.imagen %>" style="width: 64px; height: 64px;"><br>
+            <b>Codigo interno:</b><%= @product.codigo_interno %><br>
+             <b>Codigo externo:</b><%= @product.codigo_externo %><br>
+        </div>
+        <div class="span3">
+          <p>
+            <b>Nombre: </b><%= @product.nombre %><br>
+              <b>Category:</b><%= @product.category.nombre %><br>
+            <b>Marca:</b><%= @product.marca %> <br>
+             <b>Referencia marca:</b><%= @product.referencia_marca %><br>
+            <b>Codigo interno:</b><%= @product.codigo_interno %><br>
+             <b>Codigo externo:</b><%= @product.codigo_externo %><br>
+              <b>Talla:</b> <%= @product.talla %><br>
+                <b>Color:</b>  <%= @product.color %><br>
+                <b>Descripcion:</b><em><%= @product.descripcion %></em>
+              
+          </p>
+        </div>
+        <div class="span5">
+          <p>
+            <b>Ficha tecnica:</b>
+            <%= @product.ficha_tecnica %>
+          </p>
+          <p>
+            <b>Ficha produccion:</b>
+            <%= @product.ficha_produccion %>
+          </p>
 
-<p>
-  <b>Codigo interno:</b>
-  <%= @product.codigo_interno %>
-</p>
-
-<p>
-  <b>Codigo externo:</b>
-  <%= @product.codigo_externo %>
-</p>
-
-<p>
-  <b>Nombre:</b>
-  <%= @product.nombre %>
-</p>
-
-<p>
-  <b>Talla:</b>
-  <%= @product.talla %>
-</p>
-
-<p>
-  <b>Color:</b>
-  <%= @product.color %>
-</p>
-
-<p>
-  <b>Ficha tecnica:</b>
-  <%= @product.ficha_tecnica %>
-</p>
-
-<p>
-  <b>Ficha produccion:</b>
-  <%= @product.ficha_produccion %>
-</p>
-
-<p>
-  <b>Descripcion:</b>
-  <%= @product.descripcion %>
-</p>
-
-<p>
-  <b>Marca:</b>
-  <%= @product.marca %>
-</p>
-
-<p>
-  <b>Referencia marca:</b>
-  <%= @product.referencia_marca %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @product.category %>
-</p>
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+        </div>
+      </div>
+    </div>
+   </div>
+</div> 
