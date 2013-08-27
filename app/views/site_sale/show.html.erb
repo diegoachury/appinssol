@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="span5">
+      <div class="row">
+        <div class="span1">
+          <%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left'></i> Atras</div>".html_safe,  :controller => "site_sale"%>
+        </div>
+        <div class="span2">
+          <p><strong><%= @product.marca %> </strong><em>(<%= @product.referencia_marca %>)</em>
+          </p>
+        </div>
+        <div class=" span2 pull-right">
+          <strong>cod: <%= @product.codigo_externo %></strong> 
+        </div>
+      </div>      
+      <img src="<%= @product.imagen %>" class="img-rounded" style="width: 460px; height: 470px;">
+      
+    </div>
+    <div class="span10">
+      <div class="row">
+        <div class="span5">
+          <p><strong>$59.000 (COP)P</strong></p><br>
+          <strong>  <%= @product.nombre %></strong><br>
+           <div style="text-align:justify;">
+            <small><%= @product.descripcion %></small> 
+          </div>
+          <br>
+          <fieldset>
+            <legend><p><strong>TALLAS</strong></p></legend>
+            <p><%= @product.talla %></p>
+            <br>
+            <legend><p><strong>COLORES</strong></p></legend>
+            <p><%= @product.color %></p>
+             <br>
+             <legend><p><strong>CATEGORIA</strong></p></legend>
+            <p><%= @product.category.nombre %></p>
+          </fieldset> 
+        </div>
+        <div class="span5">
+          <table>
+            <thead>
+              <tr>
+                <th><p class="text-left">Ficha tecnica</p></th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%= @product.ficha_tecnica %></td>
+              </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

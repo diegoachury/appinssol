@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <ul class="thumbnails">
+    <% @products.each do |producto| %>
+<li class="span4">
+  <div class="thumbnail">
+    <img src="<%= producto.imagen %>" alt="ALT NAME" style="width: 300px; height: 200px;">
+    <div class="caption">
+      <strong><%= producto.nombre %></strong><br>
+      <p class="text-info"><strong>$ <%= producto.precio %>(COP)</strong></p>
+      <span class="label label-warning"><%= producto.category.nombre %> </span> <span class="label"><%= producto.marca %></span>
+      <p>
+        <small><strong>Codigo: </strong> <%= producto.codigo_externo %></small><br>
+        <small><strong>Referencia Marca: </strong> <%= producto.referencia_marca %></small>
+      </p>
+      
+      <p><small><%= producto.descripcion.truncate(60) %></small> </p>
+       <%= link_to "<div class='btn btn-primary btn-block'>Ver mas</div>".html_safe,  :controller => "site_sale", :action => "show", :id => producto%>
+    </div>
+  </div>
+</li>
+ <% end %>
+</ul>
+
+</div>

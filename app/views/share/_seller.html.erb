@@ -1,0 +1,43 @@
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner1">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#"><img src="/img/logo.png" style="width: 126px; height: 22px;"></a>
+          <div class="row">
+            <div class="span6">
+          <div class="nav-collapse collapse">          
+               <form class="navbar-form pull-right">
+                <%= form_tag products_path, :method => 'get' do %>
+                    <div class="input-append">
+                        <%= text_field_tag :search, params[:search], :class=> 'span4'%>
+                        <%= submit_tag "Buscar", :nombre => nil, :class => 'btn btn-primary' %>
+                    </div>
+                <% end %>
+            </form>
+            </div>
+           
+            
+          </div><!--/.nav-collapse -->
+          <div class="span5 pull-right">
+            <div class="btn-group">
+                <button class="btn btn-primary"><%= current_seller.email %></button>
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <!-- dropdown menu links -->
+                   <li><%= link_to 'Aplicacion', :controller => 'site_sale', :action =>'index' %></li>
+                  <li><%= link_to 'Perfil', edit_seller_registration_path %></li>
+                  <li><%= link_to 'logout', destroy_seller_session_path, :method => :delete %></li>
+                </ul>
+              </div>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
