@@ -20,5 +20,6 @@
 </li>
  <% end %>
 </ul>
-
+<%= will_paginate @products, :class => 'flickr_pagination',   :previous_label => t("will_paginate.previous_label"),
+  :next_label     => t("will_paginate.next_label")%>
 </div>

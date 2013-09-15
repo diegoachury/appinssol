@@ -79,7 +79,7 @@
       <td><%= product.referencia_marca %></td>
       <td><%= product.color %></td>
       <td><%= product.talla %></td>
-      <td><%= product.category %></td>
+      <td><%= product.category.nombre %></td>
       <td> <%= link_to "<div class='btn btn-mini'><i class='icon-eye-open'></i> Ver</div>".html_safe, product %></td>
       <td>  <%= link_to "<div class='btn btn-mini'><i class='icon-pencil'></i> Editar</div>".html_safe, edit_product_path(product) %></td>
       <td> <%= link_to "<div class='btn btn-mini'><i class='icon-remove-circle'></i> Eliminar</div>".html_safe, product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
