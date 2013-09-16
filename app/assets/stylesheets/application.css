@@ -13,7 +13,11 @@
  *= require bootstrap
  */
 
-
+@media print {
+  body{
+    background-color: #FFF;
+  }
+}
 body {
 	padding-top: 6px;
 	padding-bottom: 40px;

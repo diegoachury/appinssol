@@ -64,6 +64,8 @@ module Appinssol
     config.assets.version = '1.0'
     #heroku devise
     config.assets.initialize_on_precompile = false
+    #pdfkit
+    #config.middleware.use "PDFKit::Middleware", :print_media_type => true
 
   end
 end

@@ -14,13 +14,19 @@ group :production do
 
 end
 
+#gema de formularios 
 gem 'simple_form'
+#gema devise autenticacion
 gem 'devise'
+#gema heroku 
 gem 'heroku'
+#gema google analytics
 gem 'google-analytics-rails'
+#gema de new relic
 gem 'newrelic_rpm'
+#gema para generar paginacion
 gem 'will_paginate'
-
+#gema para generar pdf
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -35,6 +41,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
