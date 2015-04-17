@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.2.1"
 gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
@@ -10,6 +10,7 @@ group :development, :test do
 	gem 'pg'
 end
 group :production do
+
 	gem 'pg'
 end
 
