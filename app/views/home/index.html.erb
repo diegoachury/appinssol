@@ -1,7 +1,9 @@
 <style>
 body {
+    width: 100%;
     background: url(/img/fondo_r.jpg);
-            background-size:120% 120%;
+            background-size: 100% 100%;
+            background-position: cover;
             background-repeat:no-repeat;
 }
 
@@ -24,7 +26,7 @@ body {
             <hr>
             <p><strong><%=t :descripcion %></strong><br>
                 <br>
-                <%= link_to t("registrar"), registrar_path, :class =>"btn btn-large btn-warning" %>
+                <%= link_to t("registrarse"), registrar_path, :class =>"btn btn-large btn-warning" %>
                 <%= link_to t("iniciar"), login_path, :class => "btn btn-large btn-primary" %>
             </p>
         </div>
