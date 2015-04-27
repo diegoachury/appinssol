@@ -8,6 +8,14 @@ class HomeController < ApplicationController
   	
   end
 
+    def home
+      @customers = Customer.all
+      @welcomes =   Welcome.all
+      
+
+    
+  end
+
   def servicio
   	@customers = Customer.all
 

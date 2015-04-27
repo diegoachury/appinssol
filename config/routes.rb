@@ -73,7 +73,7 @@ devise_scope :admin do
     get 'gestion', to: 'home#gestion', as: :gestion
     get 'cotizar', to: 'quotes#new', as: :cotizar
     get 'contacto', to: 'contacts#new', as: :contacto
-    root :to => 'home#index'
+    root :to => 'home#home'
   end
 
   

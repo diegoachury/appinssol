@@ -7,6 +7,7 @@
   <%= javascript_include_tag "application" %>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
   <meta name="google-site-verification" content="bC_hpt0Jzy1nIfX80duM9OoNdYHqhk2Eg-KHc6fJwVQ" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
@@ -49,6 +50,24 @@
   <p class="alert alert-error"><%= alert %></p>
 <% end %>	
 <%= yield %>
+
+<footer class="foot">
+  <div class="content">
+    <ul>
+      <li>INSSOL SAS - 2015</li>
+      <li><a href="#">INICIO</a></li>
+      <li><a href="#">COMPAÑIA</a></li>
+      <li><a href="#">SERVICIOS</a></li>
+      <li><a href="#">GESTION</a></li>
+      <li><a href="#">CONTACTO</a></li>
+    </ul>
+  </div>
+  <div class="design">
+    <a href="http://www.lubu.com.co/"><img src="/images/lubu.png"></a> 
+    <span>DESIGN</span>        
+  </div>
+</footer>
+
 <script>
 $('.dropdown-toggle').dropdown();
 </script>
