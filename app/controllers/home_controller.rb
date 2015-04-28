@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
   end
 
-  def home
+  def homeindex
       @customers = Customer.all
       @welcomes =   Welcome.all
   end

@@ -74,7 +74,7 @@ devise_scope :admin do
     get 'cotizar', to: 'quotes#new', as: :cotizar
     get 'contacto', to: 'contacts#new', as: :contacto
     get 'catalogo', to: 'home#catalogo', as: :catalogo
-    root :to => 'home#home'
+    root :to => 'home#homeindex'
   end
 
   
