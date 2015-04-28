@@ -26,6 +26,7 @@ gem 'will_paginate'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'jquery-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'twitter-bootstrap-rails', '~> 2.2.8'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

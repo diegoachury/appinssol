@@ -20,31 +20,16 @@
 
  <% if admin_signed_in? %>
   <%= render 'share/admin' %>
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
     <% elsif seller_signed_in?  %>
       <%= render 'share/seller' %>
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
     <% else %>
      <%= render 'share/menu' %>
+    <% end %> 	  
 <% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
-<% end %> 	  
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
+  <div class="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p><%= notice %></p>
+  </div>
 <% end %>
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
@@ -53,13 +38,13 @@
 
 <footer class="foot">
   <div class="content">
-    <ul>
+     <ul>
       <li>INSSOL SAS - 2015</li>
-      <li><a href="#">INICIO</a></li>
-      <li><a href="#">COMPAÑIA</a></li>
-      <li><a href="#">SERVICIOS</a></li>
-      <li><a href="#">GESTION</a></li>
-      <li><a href="#">CONTACTO</a></li>
+      <li><%= link_to t("home"), inicio_path %></li>
+      <li><%= link_to t("company"), company_path %></li>
+      <li><%= link_to t("servicio"), servicios_path %></li>
+      <li><%= link_to t("gestion"), gestion_path %></li>
+      <li><%= link_to t("contacto"), contacto_path %></li>      
     </ul>
   </div>
   <div class="design">
@@ -74,12 +59,12 @@ $('.dropdown-toggle').dropdown();
 <script>
 $('#myCollapsible').collapse({
   toggle: false
-})
+});
 </script>
 <script>
 $('.carousel').carousel({
   interval: 4000
-})
+});
 </script>
 <!--analytics 3ssas-->
 <script>

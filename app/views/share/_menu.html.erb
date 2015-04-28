@@ -1,32 +1,43 @@
  <header>
       <div class="content-logo">
-        <img src="images/logo.png" alt="">
+        <img src="/images/logo.png" alt="">
         <div class="menu-landscape">
         <ul>
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">COMPAÑIA</a></li>
-          <li><a href="#">SERVICIOS</a></li>
-          <li><a href="#">GESTION</a></li>
-          <li><a href="#">CONTACTO</a></li>
+          <li><%= link_to t("home"),  "/" %></li>
+          <li><%= link_to t("company"), company_path %></li>
+          <li><%= link_to t("servicio"), servicios_path %></li>
+          <li><%= link_to t("gestion"), gestion_path %></li>
+          <li><%= link_to t("contacto"), contacto_path %></li>
+          <% if user_signed_in? %>
+          <li><%= link_to t("catalogo"), catalogo_path %></li>
+          <li><%= link_to t("cotizar"), cotizar_path %></li>
+          <%end%>
         </ul>
       </div>
-        <a class="menu-movil" class="#" href=""><i class="fa fa-bars"></i></a>
+        <a class="menu-movil" href="#"><i class="fa fa-bars"></i></a>
         <ul>
-          <li><a href="#"><img src="/images/colombia.png"> ES</a></li>
+          <li><%= link_to '<img src="/images/colombia.png"> ES'.html_safe,  :locale => :es %></li>
           <li>/</li>
-          <li><a href=""><img src="/images/usa.png"> EN</a></li>
-          <li><a class="iniciar" href="">INICIAR</a></li>
+          <li><%= link_to '<img src="/images/usa.png"> EN'.html_safe,  :locale => :en %></li>
+          <% if user_signed_in? %>
+           <li> <%= link_to t("logout"), logout_path, :class => "salir" %></li>
+           <% else %>
+            <li><%= link_to t("iniciar"), login_path, :class => "iniciar" %></li>
+          <% end %>
         </ul>
 
         
       </div>
       <div class="menu">
         <ul>
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">COMPAÑIA</a></li>
-          <li><a href="#">SERVICIOS</a></li>
-          <li><a href="#">GESTION</a></li>
-          <li><a href="#">CONTACTO</a></li>
+          <li><%= link_to t("home"), inicio_path %></li>
+          <li><%= link_to t("company"), company_path %></li>
+          <li><%= link_to t("servicio"), servicios_path %></li>
+          <li><%= link_to t("gestion"), gestion_path %></li>
+          <li><%= link_to t("contacto"), contacto_path %></li>
+          <% if user_signed_in? %>
+          <li><%= link_to t("cotizar"), cotizar_path %></li>
+          <%end%>
         </ul>
       </div>
     </header>

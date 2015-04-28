@@ -16,8 +16,6 @@
 //= require_tree .
 //= require bootstrap
 
-console.log('\'Allo \'Allo!');
-
 //plugin
 /*!
 * jQuery Cycle2; version: 2.1.6 build: 20141007
@@ -56,9 +54,23 @@ $('.slideshow-hero').cycle({
     slides: 'li'
 });
 
-$('.content-logo a.menu-movil').click(function(e){
-	e.preventDefault();
-	// $('.responsive-menu').toggleClass('expand');
-    $('.menu').slideToggle();
-    return false;
+$(document).ready(function() {
+
+	$('.content-logo a.menu-movil').click(function(e){
+		e.preventDefault();
+	    $('.menu').slideToggle();
+	    return false;
+	});
+
+	if($(window).width() <= 640){
+	  // do your stuff
+		$('li a.content').click(function(e){
+			e.preventDefault();
+			// $('.responsive-menu').toggleClass('expand');
+			$(this).siblings('ul.list-docs').slideToggle();
+		    return false;
+		});
+	} 
+
 });
+
