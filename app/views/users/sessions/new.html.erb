@@ -1,74 +1,23 @@
-<style>
-.azul {
-	 background: url(/img/protec.jpg);
-            border-radius: 1em;
-}
-body{
-	background: black;
-
-}
-h1 {
-	
-	font-family: 'Ubuntu', sans-serif;
-	color: white;
-	font-weight: 500;
-	text-shadow:2px 2px #000000;
-}
-
-h2 {
-	
-	font-family: 'Ubuntu', sans-serif;
-	color: #f18200;
-	font-weight: 500;
-	text-shadow:2px 2px #000000;
-}
-</style>
-<div class="azul">
-<div class="container">
-	<div class="row-fluid">
-		<div class="span12">
-			<div class="row">
-				<div class="span4">
-
-					
-			<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html:{class: "well"}) do |f| %>
-			<fieldset>
-						<legend><h2><%=t :iniciar %></h2></legend>
-
-    			<%= f.input :email, label: 'Correo Electronico', :required => false, :autofocus => true %>
-    			<%= f.input :password,label: 'Contraseña', :required => false %>
-    			<%= f.input :remember_me, label: 'Recordar', :as => :boolean if devise_mapping.rememberable? %>
-  			
-
-  <div class="form-actions">
-    <%= f.button :submit, "Iniciar" %>
-  </div>
-  </fieldset>
-<% end %>
-
-
-
-
-				</div>
-				<div class="span6 offset2" style="padding-top: 30px;">
-					<h1>INSSOL SAS</h1>
-					<blockquote>
-						<h2><%=t :description_login %></h2>
-					</blockquote>
-				</div>
-			</div>
-			
-
-
-
-		</div>
-
-	</div>
-
-</div>
-</div>
-
-
-
-
-
+<section class="registrar login">
+      <div class="content-bg">
+        <p class="title"><%=t :iniciar %></p>
+      </div>
+      <div class="content-box login">
+        <div class="content-copy">	
+          <div class="content-form">
+            <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+            <!-- datos del contacto  -->
+            	<label for=""><%=t :correo_registro %></label>
+            	<%= f.input :email, label: false, :required => false, :autofocus => true %>
+            	<label for=""><%=t :clave_registro %></label>
+    			<%= f.input :password, label: false, :required => false %>
+    			<%= f.input :remember_me, label: 'Recordar', :as => :boolean if devise_mapping.rememberable? %>            	
+	            <div class="content-btn">
+	            	<%= f.button :submit, "INICIAR" %>
+	            </div>
+        	<% end %>            
+          </div>
+        </div>
+      </div>
+    </section>
