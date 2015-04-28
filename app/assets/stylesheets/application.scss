@@ -131,6 +131,11 @@ body {
             display: block;
             width: 100%;
             padding: 5px 0 5px 0;
+            color: #0088cc;
+            text-shadow: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #F4F4F4;
+
             &:hover{
               text-decoration: none;
               background: #F0F0F0;
@@ -316,7 +321,11 @@ body {
         a{
           position: relative;
           bottom: 44px;
+          color: #fff;
           box-shadow:  0px 5px 10px rgba(0,0,0,0.50);
+          &:hover{
+            color: #fff;
+          }
         }
       }
       .content-logo{
@@ -363,6 +372,10 @@ body {
         text-align: center;
         a{
           box-shadow:  0px 2px 8px rgba(0,0,0,0.50);
+          color: #fff;
+          &:hover{
+            color: #fff;
+          }
         }
         img{
           width: 250px;

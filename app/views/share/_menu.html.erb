@@ -30,12 +30,13 @@
       </div>
       <div class="menu">
         <ul>
-          <li><%= link_to t("home"), inicio_path %></li>
+          <li><%= link_to t("home"), "/" %></li>
           <li><%= link_to t("company"), company_path %></li>
           <li><%= link_to t("servicio"), servicios_path %></li>
           <li><%= link_to t("gestion"), gestion_path %></li>
           <li><%= link_to t("contacto"), contacto_path %></li>
           <% if user_signed_in? %>
+          <li><%= link_to t("catalogo"), catalogo_path %></li>
           <li><%= link_to t("cotizar"), cotizar_path %></li>
           <%end%>
         </ul>

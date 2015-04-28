@@ -85,7 +85,16 @@
         <div class="content-descarga">
           <img src="/images/catalogo.jpg" alt="">
           <p class="description"><%=t :copy_catalogo %></p>
-          <a href="" class="descargas"> DESCARGAR</a>
+          <% if user_signed_in? %>
+            <%= link_to catalogo_path, :class => "descargas" do %>
+             <i class="fa fa-file-pdf-o"></i> <%=t :catalogo %>
+            <% end %>
+            <% else %>
+            <%= link_to registrar_path, :class => "descargas" do %>
+             <i class="fa fa-cloud-download"></i> <%=t :descargar %>
+            <% end %>
+            <!-- <a href="" class="descargas"> DESCARGAR</a>    -->           
+          <% end %>
         </div>
         <div class="content-info">
           
