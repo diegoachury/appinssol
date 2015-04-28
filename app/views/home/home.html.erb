@@ -1,0 +1,145 @@
+
+    
+    <section ="home">
+      <div class="hero">
+        <div class="copy-movile">
+          <h1><%=t :h1_hero1_movil %></h1>
+          <p><%=t :h2_hero1_movil %></p>
+          <p><%=t :p_hero1_movil %></p>          
+        </div> 
+        <ul class="slideshow-hero">
+          <li>
+            <img src="/images/hero/hero-industria.jpg">
+            <div class="copy">
+              <h1><%=t :h1_hero1_rotador %></h1>
+              <h2><%=t :h2_hero1_rotador %></h2>
+              <h3> <%=t :h3_hero1_rotador %></h3>
+              <p><%=t :p_hero1_rotador %></p>           
+            </div> 
+          </li>
+          <li>
+            <img src="/images/hero/hero-agro.jpg">
+            <div class="copy">
+              <h1><%=t :h1_hero2_rotador %></h1>
+              <h2><%=t :h2_hero2_rotador %></h2>
+              <h3> <%=t :h3_hero2_rotador %></h3>
+              <p><%=t :p_hero2_rotador %></p>           
+            </div> 
+          </li>
+          <li>
+            <img src="/images/hero/hero-energetico.jpg">
+            <div class="copy">
+              <h1><%=t :h1_hero3_rotador %></h1>
+              <h2><%=t :h2_hero3_rotador %></h2>
+              <h3> <%=t :h3_hero3_rotador %></h3>
+              <p><%=t :p_hero3_rotador %></p>           
+            </div> 
+          </li>
+          <li>
+            <img src="/images/hero/hero-civil.jpg">
+            <div class="copy">
+              <h1><%=t :h1_hero4_rotador %></h1>
+              <h2><%=t :h2_hero4_rotador %></h2>
+              <h3> <%=t :h3_hero4_rotador %></h3>
+              <p><%=t :p_hero4_rotador %></p>          
+            </div> 
+          </li>
+          <li>
+            <img src="/images/hero/hero-aereo.jpg">
+            <div class="copy">
+              <h1><%=t :h1_hero5_rotador %></h1>
+              <h2><%=t :h2_hero5_rotador %></h2>
+              <h3> <%=t :h3_hero5_rotador %></h3>
+              <p><%=t :p_hero5_rotador %></p>          
+            </div> 
+          </li>
+        </ul>
+
+      </div>
+      <div class="clientes">
+        <div class="content-btn">
+          <%= link_to t("registrar"), registrar_path, :class => "empresa" %>
+          <!-- <a href="#" class="empresa">Registre su Empresa</a>   --> 
+        </div>
+        <div class="content-logo">
+          <ul class="slideshow-movil">
+            <li><img src="/images/clientes/ecopetrol.png"> <img src="/images/clientes/cafe.png"></li>
+            <li><img src="/images/clientes/engesa.png"><img src="/images/clientes/emerald.png"></li>
+            <li><img src="/images/clientes/masa.png"><img src="/images/clientes/gasnatural.png"></li>
+          </ul>
+          <ul class="slideshow-medium" data-cycle-timeout=3000 data-cycle-carousel-visible=5>
+            <li><img src="/images/clientes/ecopetrol.png"> </li>
+            <li><img src="/images/clientes/cafe.png"></li>
+            <li><img src="/images/clientes/engesa.png"></li>
+            <li><img src="/images/clientes/emerald.png"></li>
+            <li><img src="/images/clientes/gasnatural.png"></li>
+            <li><img src="/images/clientes/masa.png"></li>
+          </ul>          
+        </div>
+           
+      </div>
+      <div class="catalogo">
+        <p class="title"><%=t :titulo_catalogo %></p>
+        <p class="description"><%=t :descripcion_catalago %></p>
+        <p class="line"></p>
+        <div class="content-descarga">
+          <img src="/images/catalogo.jpg" alt="">
+          <p class="description"><%=t :copy_catalogo %></p>
+          <a href="" class="descargas"> DESCARGAR</a>
+        </div>
+        <div class="content-info">
+          
+          <div class="song">
+            <img src="/images/serv-1.jpg" alt="">
+            <p class="up"><%=t :song1_copy1 %></p>
+            <p><b><%=t :song1_copy2 %></b></p>
+          </div>
+          <div class="song">
+            <div class="postion-catalogo">
+              <img class="cata-img" src="/images/catalogo.jpg" alt="">
+            <p class="description"><%=t :copy_catalogo %></p>
+            <% if user_signed_in? %>
+              <%= link_to catalogo_path, :class => "descargas" do %>
+               <i class="fa fa-file-pdf-o"></i> <%=t :catalogo %>
+              <% end %>
+              <% else %>
+              <%= link_to registrar_path, :class => "descargas" do %>
+               <i class="fa fa-cloud-download"></i> <%=t :descargar %>
+              <% end %>
+              <!-- <a href="" class="descargas"> DESCARGAR</a>    -->           
+            <% end %>
+            </div>
+            
+          </div>
+          <div class="song">
+            <img src="/images/serv-2.jpg" alt="">
+            <p class="up"><%=t :song2_copy1 %></p>
+            <p> <br><b><%=t :song2_copy2 %></b> </p>
+          </div>
+          <div class="song">
+            <img src="/images/serv-3.jpg" alt="">
+            <p class="up"><%=t :song3_copy1 %></p>
+            <p> <br><b><%=t :song3_copy2 %></b> </p>
+          </div>
+          
+
+        </div>
+      </div>
+      <div class="contacto">
+        <div class="triangulo"></div>  
+        <p class="title"><%=t :titulo_contacto %></p>
+        <p><%=t :copy_contacto %> <a href="mailto:comercial@inssol.com.co">comercial@inssol.com.co</a></p>
+               
+      </div>
+      <div class="map">
+        <div class="google-maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3976.929454438579!2d-74.07624!3d4.6066519999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a01cc83673%3A0x7c33e184e8b73127!2sDOTACIONES+MODATEX!5e0!3m2!1ses!2s!4v1430051903094" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        </div>        
+      </div>
+      <div class="aliados">
+        <p><%=t :aliados %></p>
+        <img src="/images/clientes/3s.png">
+       <img src="/images/clientes/in-huila.png">
+      </div>
+    </section>
+

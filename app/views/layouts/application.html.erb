@@ -7,6 +7,7 @@
   <%= javascript_include_tag "application" %>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
   <meta name="google-site-verification" content="bC_hpt0Jzy1nIfX80duM9OoNdYHqhk2Eg-KHc6fJwVQ" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
@@ -19,48 +20,51 @@
 
  <% if admin_signed_in? %>
   <%= render 'share/admin' %>
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
     <% elsif seller_signed_in?  %>
       <%= render 'share/seller' %>
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
     <% else %>
      <%= render 'share/menu' %>
+    <% end %> 	  
 <% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
-<% end %> 	  
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
+  <div class="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p><%= notice %></p>
+  </div>
 <% end %>
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
 <% end %>	
 <%= yield %>
+
+<footer class="foot">
+  <div class="content">
+     <ul>
+      <li>INSSOL SAS - 2015</li>
+      <li><%= link_to t("home"), inicio_path %></li>
+      <li><%= link_to t("company"), company_path %></li>
+      <li><%= link_to t("servicio"), servicios_path %></li>
+      <li><%= link_to t("gestion"), gestion_path %></li>
+      <li><%= link_to t("contacto"), contacto_path %></li>      
+    </ul>
+  </div>
+  <div class="design">
+    <a href="http://www.lubu.com.co/"><img src="/images/lubu.png"></a> 
+    <span>DESIGN</span>        
+  </div>
+</footer>
+
 <script>
 $('.dropdown-toggle').dropdown();
 </script>
 <script>
 $('#myCollapsible').collapse({
   toggle: false
-})
+});
 </script>
 <script>
 $('.carousel').carousel({
   interval: 4000
-})
+});
 </script>
 <!--analytics 3ssas-->
 <script>

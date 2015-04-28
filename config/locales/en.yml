@@ -1,5 +1,5 @@
 # Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# See https://github.com/svenfuchs/rails_i18n/tree/master/rails%2Flocale for starting points.
 
 en:
 
@@ -15,12 +15,13 @@ en:
   lema_nav: "If you are looking for is not here,"
   lema_nav2: "We got it!"
   aliados: "allies"
-  registrar: "Register"
-  logout: "logout"
+  registrar: "REGISTER COMPANY"
+  logout: "LOGOUT"
+  logout_admin: "LOGOUT ADMIN"
   perfil: "profile"
   ver_mas: "to see more information"
-  iniciar: "Login"
-  catalogo: "CATALOGUE"
+  iniciar: "LOGIN"
+  catalogo: "CATALOG"
   seguridad_industrial: "Industrial safety"
   proteccion_auditiva: "Hearing protection"
   proteccion_cabeza: "Head and facial protection"
@@ -105,7 +106,54 @@ en:
   informacion_ingreso: "Join Data"
   description_ingreso: "enters the data you want to start on our platform."
   informacion_password: "the password must be 8 characters minimum length"
-
-
-
+  # NUEVA PAGINA DE INICIO
+  # ROTADOR HERO
+  h1_hero1_movil: "INTEGRAL SERVICES & SOLUTIONS SAS"
+  h2_hero1_movil: "PROVIDE SERVICES AND SOLUTIONS FOR INDUSTRY"
+  p_hero1_movil: "ADD YOUR COMPANNY"
+  # hero 1
+  h1_hero1_rotador: "INTEGRAL SERVICES & SOLUTIONS SAS"
+  h2_hero1_rotador: "PROVIDE SERVICES AND SOLUTIONS"
+  h3_hero1_rotador: "FOR INDUSTRY"
+  p_hero1_rotador: "ADD YOUR COMPANNY"
+  # hero 2
+  h1_hero2_rotador: "INTEGRAL SERVICES & SOLUTIONS SAS"
+  h2_hero2_rotador: "PROVIDE SERVICES AND SOLUTIONS"
+  h3_hero2_rotador: "FOR AGROINDUSTRY"
+  p_hero2_rotador: "ADD YOUR COMPANNY"
+  # hero 3
+  h1_hero3_rotador: "INTEGRAL SERVICES & SOLUTIONS SAS"
+  h2_hero3_rotador: "PROVIDE SERVICES AND SOLUTIONS"
+  h3_hero3_rotador: "FOR ENERGY INDUSTRY"
+  p_hero3_rotador: "ADD YOUR COMPANNY"
+   # hero 4
+  h1_hero4_rotador: "INTEGRAL SERVICES & SOLUTIONS SAS"
+  h2_hero4_rotador: "PROVIDE SERVICES AND SOLUTIONS"
+  h3_hero4_rotador: "FOR CONSTRUCTING"
+  p_hero4_rotador: "ADD YOUR COMPANNY"    
+   # hero 5
+  h1_hero5_rotador: "INTEGRAL SERVICES & SOLUTIONS SAS"
+  h2_hero5_rotador: "PROVIDE SERVICES AND SOLUTIONS"
+  h3_hero5_rotador: "FOR AEREONAUTICAL"
+  p_hero5_rotador: "ADD YOUR COMPANNY"
+  #catalogo
+  titulo_catalogo: "OUR SERVICES AND SOLUTIONS FOUR YOUR COMPANY"
+  descripcion_catalago: "Prestamos soluciones y servicios a los diferentes retos de las industrias acompañandolos en todo el proceso de desarrollo, haciendo que su empresa cuente con equipos especializados, dotaciones de seguridad."
+  copy_catalogo: "Updated download our catalog"
+  #song-1
+  song1_copy1: "EQUIPMENT"
+  song1_copy2: "ESPECIALIZED"
+  #song-2
+  song2_copy1: "MATERIALS"
+  song2_copy2: "CONSTRUCTION"
+  #song-3
+  song3_copy1: "SECURITY"
+  song3_copy2: "INDUSTRIAL"
+  #contacto
+  titulo_contacto: "CONTACT US"
+  copy_contacto: "write to our email"
+  #aliados
+  aliados: "OUR PARTNERS"
+  #descargar
+  descargar: "SHOW CATALOG"
 
