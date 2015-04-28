@@ -1848,6 +1848,10 @@ and (-webkit-min-device-pixel-ratio: 2){
         ul.slideshow-movil{
           display: none;
         }
+        ul.slideshow-medium{
+          display: block;
+          width: 650px !important;
+        }
         ul{
           margin: 0 auto;
           text-align: center;
