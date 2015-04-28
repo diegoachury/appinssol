@@ -156,4 +156,14 @@ en:
   aliados: "OUR PARTNERS"
   #descargar
   descargar: "SHOW CATALOG"
-
+  #formulario de registro
+  nombre_registro: "FULL NAME"
+  cargo_registro: "OCCUPATION"
+  celular_registro: "MOVIL"
+  empresa_registro: "NAME COMPANY"
+  telefono_registro: "PHONE"
+  pais_registro: "COUNTRY"
+  servicio_registro: "¿SOLUTION OR SERVICE THAT YOU ARE INTERESTED?"
+  correo_registro: "EMAIL"
+  clave_registro: "PASSWORD"
+  clave2_registro: "CONFIRM PASSWORD"

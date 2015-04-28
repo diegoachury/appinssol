@@ -2,7 +2,9 @@
 # See https://github.com/svenfuchs/rails_i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-
+  errors:
+    messages:
+      blank: "Este campo es obligatorio y no puede estar en blanco"
   home: "INICIO"
   company: "COMPAÑIA"
   servicio: "SERVICIOS"
@@ -101,7 +103,7 @@ es:
   #registrar
   informacion_personal: "Informacion Personal"
   description_personal: "informacion basica para poder dirigirnos y comunicarnos con usted."
-  informacion_empresa: "nformacion de la Empresa"
+  informacion_empresa: "Informacion de la Empresa"
   description_empresa: "Es importante para nosotros conocer las necesidades de tu empresa y brindarle la mejor solucion."
   informacion_ingreso: "Datos de Ingreso"
   description_ingreso: "ingresa los datos con los que quieres iniciar en nuestra plataforma."
@@ -156,5 +158,14 @@ es:
   aliados: "NUESTROS ALIADOS"
   #descargar
   descargar: "VER CATALOGO"
-
-
+  #formulario de registro
+  nombre_registro: "NOMBRE COMPLETO"
+  cargo_registro: "CARGO"
+  celular_registro: "CELULAR"
+  empresa_registro: "NOMBRE DE LA EMPRESA"
+  telefono_registro: "TELEFONO"
+  pais_registro: "PAIS"
+  servicio_registro: "¿QUE SERVICIO O SOLUCIÓN TE INTERESA?"
+  correo_registro: "CORREO ELECTRONICO"
+  clave_registro: "CONTRASEÑA"
+  clave2_registro: "CONFIRMAR CONTRASEÑA"

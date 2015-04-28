@@ -5,7 +5,7 @@ Appinssol::Application.routes.draw do
   devise_for :sellers
    devise_scope :seller do
      get 'virtual', to: 'devise/sessions#new', as: :virtual
-  end
+   end
 
   get "site_sale/index"
     get "site_sale/show"
@@ -31,13 +31,13 @@ match '/users/:id', :to => 'users#destroy', :as => :destroy_user, :via => :delet
       
 
 
-  devise_for :users
 
-  devise_scope :user do
-    get 'registrar', to: 'devise/registrations#new', as: :registrar
-    get 'login', to: 'devise/sessions#new', as: :login
-    get 'logout', to: 'devise/sessions#destroy', as: :logout  
-  end
+
+  # devise_scope :user do
+  #   get 'registrar', to: 'devise/registrations#new', as: :registrar
+  #   get 'login', to: 'devise/sessions#new', as: :login
+  #   get 'logout', to: 'devise/sessions#destroy', as: :logout  
+  # end
  
   devise_for :admins
 devise_scope :admin do
@@ -66,7 +66,13 @@ devise_scope :admin do
     get 'gestion', to: 'home#gestion', as: :gestion
         get "home/gestion"    
 
-  scope '(:locale)' do
+  scope '(:locale)', :locale => /es|en/ do    
+    devise_scope :user do
+      get 'registrar', to: 'devise/registrations#new', as: :registrar
+      get 'login', to: 'devise/sessions#new', as: :login
+      get 'logout', to: 'devise/sessions#destroy', as: :logout  
+    end 
+    devise_for :users  
   get 'inicio', to: 'home#index', as: :inicio
     get 'servicios', to: 'home#servicio', as: :servicios
     get 'company', to: 'home#company', as: :company
