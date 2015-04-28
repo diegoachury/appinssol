@@ -66,7 +66,8 @@ devise_scope :admin do
     get 'gestion', to: 'home#gestion', as: :gestion
         get "home/gestion"    
 
-  scope '(:locale)', :locale => /es|en/ do    
+  scope '(:locale)', :locale => /es|en/ do
+    
     devise_scope :user do
       get 'registrar', to: 'devise/registrations#new', as: :registrar
       get 'login', to: 'devise/sessions#new', as: :login
