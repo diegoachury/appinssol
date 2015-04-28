@@ -6,7 +6,7 @@
  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
+ * compiled file, but it's gene  rally better to create a new file per style scope.
  *
  *= require_self
  *= require_tree .
@@ -794,6 +794,10 @@ and (-webkit-min-device-pixel-ratio: 2){
         ul.slideshow-movil{
           display: none;
         }
+        ul.slideshow-medium{
+          display: block;
+          width: 100%;
+        }
         ul{
           margin: 0 auto;
           text-align: center;
@@ -1277,6 +1281,10 @@ and (-webkit-min-device-pixel-ratio: 2){
         text-align: center;
         ul.slideshow-movil{
           display: none;
+        }
+        ul.slideshow-medium{
+          display: block;
+          width: 100%;
         }
         ul{
           margin: 0 auto;
