@@ -1,3 +1,4 @@
+<% if admin_signed_in? %>
 <h1>Listing contacts</h1>
 
 <table>
@@ -31,3 +32,4 @@
 <br />
 
 <%= link_to 'New Contact', new_contact_path %>
+<% end %>

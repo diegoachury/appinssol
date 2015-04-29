@@ -1,63 +1,40 @@
-<style>
+<% if admin_signed_in? %>
+<section class="panel">
+    <div class="content-bg">
+      <p class="title">BIENVENIDO USUARIO ADMINISTRADOR</p>
+    </div>
+    <div class="panel-users">
+      <p class="title">LISTADO DE USUARIOS REGISTRADOS</p>
+        <p class="line"></p>
+        <table class="table table-bordered">
+          <tr class="tr">
+            <th>Datos</th>
+            <th>Fecha de Creación</th>        
+            <th>Ultima Conexiones</th>
+            <th>Numero de Visitas o Conexiones</th>
+            <th></th>
 
-.tr {
-	font-size: 12px;
-	color: #b06206;
-}
-.tr_body{
-	font-size: 11px;
+          </tr>
 
-}
-
-</style>
-<h1>User#index</h1>
-<p>Find me in app/views/panel/index.html.erb</p>
-<table class="table table-bordered">
-  <tr class="tr">
-    <th>Nombre</th>
-    <th>Apellido</th>
-    <th>Pais</th>
-    <th>Ciudad</th>
-    <th>Empresa</th>
-    <th>Direccion Empresa</th>
-    <th>Nit</th>
-    <th>Genero</th>
-    <th>Telefono</th>
-    <th>Celular</th>
-    <th>Email</th>
-    <th># veces de conexion</th>
-    <th>Fecha de Creacion</th>
+        <% @users.each do |user| %>
+          <tr>
+            <td>
+                <p class="name"><strong><%= user.nombre %></strong></p>
+                <p class="datos"><strong>Correo:</strong> <%= user.email %></p>
+                <p class="datos"><strong>Empresa:</strong> <%= user.name_empresa %></p>
+                <p class="datos"><strong>Pais:</strong> <%= user.pais %></p>        
+                <p class="datos"><strong>Celular:</strong> <%= user.celular %></p>
+                <p class="datos"><strong>Celular:</strong> <%= user.telefono %></p>
+                <p class="datos"><strong>Servicio interesado:</strong>  <%= user.description %></p>
+            </td>
+            <td><p class="datos"><%= user.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></p></td>
+            <td><p class="datos"><%= user.last_sign_in_at.strftime(" %m/%d/%Y - %I:%M %p") %></p></td>
+            <td><p class="datos"><%= user.sign_in_count %></p></td>
+             <td><%= link_to "delete", user, :method => :delete, :confirm => "You sure?" %></td>               
+          </tr>
+        <% end %>
+        </table>  
+    </div>
     
-    <th>ultima conexion</th>
-    <th></th>
-
-  </tr>
-
-<% @users.each do |user| %>
-  <tr class="tr_body">
-    <td><%= user.nombre %></td>
-    <td><%= user.apellido %></td>
-    <td><%= user.pais %></td>
-    <td><%= user.ciudad %></td>
-    <td><%= user.name_empresa %></td>
-    <td><%= user.address_empresa %></td>
-    <td><%= user.nit %></td>
-    <td><%= user.genero %></td>
-    <td><%= user.telefono %></td>
-    <td><%= user.celular %></td>
-    <td><%= user.email %></td>
-    <td><%= user.sign_in_count %></td>
-    <td><%= user.created_at %></td>
-    
-     <td><%= user.last_sign_in_at %></td>
-     <td><%= link_to "delete", user, :method => :delete, :confirm => "You sure?" %></td>
-     
-  
-  </tr>
+</section>    
 <% end %>
-</table>
-
-<br />
-
-
-

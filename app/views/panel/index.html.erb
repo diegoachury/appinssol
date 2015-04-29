@@ -1,76 +1,84 @@
-<style>
-
-.tr {
-  font-size: 12px;
-  color: #b06206;
-}
-.tr_body{
-  font-size: 11px;
-
-}
-
-</style>
-<div class="container">
-
-  <h1>Panel vista rapida</h1>
-<p>Find me in app/views/panel/index.html.erb</p>
-<div class="row">
-  <div class="span12">
-
-    <div class="row">
-      <div class="span6">
-        <table class="table table-bordered">
-          <caption> Ultimos Usuarios Registrados</caption>
-  <tr class="tr">
-    <th>Nombre</th>
-    <th>Email</th>
-    <th># conexion</th>
-    <th>Fecha Creacion</th> 
-    <th>Ultima conexion</th>
-
-  </tr>
-
-<% @users.each do |user| %>
-  <tr class="tr_body">
-    <td><%= user.nombre %></td>
-    <td><%= user.email %></td>
-    <td><%= user.sign_in_count %></td>
-    <td><%= user.created_at %></td>
-    <td><%= user.last_sign_in_at %></td>  
-  </tr>
-<% end %>
-</table>
-
-<br>
-
- 
-
+<section class="panel">
+    <div class="content-bg">
+      <p class="title">BIENVENIDO USUARIO ADMINISTRADOR</p>
+    </div>
+    <div class="content-panel">
+      <div class="panel-izquierdo">
+        <div class="menu">
+          <p class="title">Menu Rapido</p>
+          <p class="line"></p>
+          <ul>
+            <li><a href="/users/index"><i class="fa fa-building"></i> Ver Usuarios Registradas</a></li>
+          </ul>            
+        </div>
+        
+        <div class="user-registrados">
+          <p class="title">Ultimos usuarios registrados </p>
+          <p class="line"></p>
+          <ul>
+            <% @users.find(:all, :order => 'created_at DESC', :limit => 10).each do |user| %>
+            <li>
+              <div class="box-users">
+                <p class="name"><%= user.nombre %></p>
+                <p><strong>Correo:</strong> <%= user.email %></p>
+                <p><strong>Empresa:</strong> <%= user.name_empresa %></p>
+                <p><strong>Pais:</strong> <%= user.pais %></p>
+                <p><strong>Servicio interesado:</strong>  <%= user.description %></p>
+                <p><strong>Se registro:</strong> <%= user.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></p>
+              </div>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+        
       </div>
-      <div class="span6">
-         <table class="table table-bordered">
-          <caption> Ultimos Contactos Registrados</caption>
-  <tr class="tr">
-    <th>Nombre</th>
-    <th>Email</th>
-    <th>Solicitud</th>
-    <th>Fecha Creacion</th> 
-
-  </tr>
-
-<% @contacts.each do |contact| %>
-  <tr class="tr_body">
-    <td><%= contact.nombre %></td>
-    <td><%= contact.email %></td>
-     <td><%= contact.comentario %></td>
-    <td><%= contact.created_at %></td>
-  </tr>
-<% end %>
-</table>
-
+      <div class="panel-derecho">
+        <p class="title">Solcitudes del formulario de contacto WEB</p>
+        <p class="line"></p>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Datos</th>
+                <th>Solicitud</th>
+              </tr>
+            </thead>
+            <tbody>
+             <% @contacts.find(:all, :order => 'created_at DESC', :limit => 15).each do |contact| %> 
+              <tr>
+                <td>
+                  <p class="datos"><strong><%= contact.nombre %></strong></p> 
+                  <p class="datos"> <%= contact.telefono %></p> 
+                  <p class="datos"><%= contact.ciudad %></p> 
+                  <p class="datos"> <%= contact.email %></p> 
+                  <strong><%= contact.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></strong>
+                </td>
+                <td><p class="comentario"><%= contact.comentario %></p></td>
+              </tr>
+             <% end %> 
+            </tbody>
+          </table>
+          <p class="end"></p>
+          <p class="title">Cotizacion Enviadas</p>
+          <p class="line"></p>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Datos</th>
+                <th>Solicitud</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @quotes.find(:all, :order => 'created_at DESC', :limit => 10) do |quote| %>
+              <td>
+                  <p class="datos"><strong><%= quote.nombre %></strong></p> 
+                  <p class="datos"> <%= quote.telefono %></p>                   
+                  <p class="datos"> <%= quote.email %></p> 
+                  <strong><%= quote.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></strong>
+                  <td><p class="comentario"><%= quote.comentario %></p></td>
+                </td>
+             <% end %>   
+            </tbody>
+          </table>    
       </div>
     </div>
-  </div>
-</div>
-
-
-</div>
+</section>

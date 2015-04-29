@@ -45,8 +45,12 @@
     <div class="span3 post_block">
 
       <p><%=t :cotizar_msj %></p>
-
-
+            <label for="">Nombre</label>
+            <%= f.input :name, label: false  %>
+            <label for="">Email</label>
+            <%= f.input :email, label: false  %>
+            <label for="">telefono</label>
+            <%= f.input :telefono, label: false  %>
             <%= f.input :comentario, label: false, placeholder: 'Escribe aqui: Descripción, Referencia, Marca, Cantidad, etc.', :input_html => { :rows => 5 }  %>
         <%= f.button :submit, "enviar", :class => "btn btn-large btn-warning"%>
     </div>
