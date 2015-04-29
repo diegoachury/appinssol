@@ -68,7 +68,7 @@
               </tr>
             </thead>
             <tbody>
-              <% @quotes.find(:all, :order => 'created_at DESC', :limit => 10) do |quote| %>
+              <% @quotes.find(:all, :order => 'created_at DESC', :limit => 10).each do |quote| %>
               <td>
                   <p class="datos"><strong><%= quote.nombre %></strong></p> 
                   <p class="datos"> <%= quote.telefono %></p>                   

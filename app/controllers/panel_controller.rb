@@ -3,8 +3,6 @@ class PanelController < ApplicationController
   	@users = User.limit(5)
   	@contacts = Contact.limit(10)
   	@quotes = Quote.all
-
-
   end
   #eliminar usuarios
   def destroy
