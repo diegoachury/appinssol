@@ -68,14 +68,17 @@
               </tr>
             </thead>
             <tbody>
-              <% @quotes.find(:all, :order => 'created_at DESC', :limit => 10).each do |quote| %>
-              <td>
+              <% @quotes.each do |quote| %>
+              <tr>
+                <td>
                   <p class="datos"><strong><%= quote.nombre %></strong></p> 
                   <p class="datos"> <%= quote.telefono %></p>                   
                   <p class="datos"> <%= quote.email %></p> 
                   <strong><%= quote.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></strong>                  
                 </td>
                 <td><p class="comentario"><%= quote.comentario %></p></td>
+              </tr>
+              
              <% end %>   
             </tbody>
           </table>    
