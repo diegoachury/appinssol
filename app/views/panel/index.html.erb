@@ -73,9 +73,9 @@
                   <p class="datos"><strong><%= quote.nombre %></strong></p> 
                   <p class="datos"> <%= quote.telefono %></p>                   
                   <p class="datos"> <%= quote.email %></p> 
-                  <strong><%= quote.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></strong>
-                  <td><p class="comentario"><%= quote.comentario %></p></td>
+                  <strong><%= quote.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></strong>                  
                 </td>
+                <td><p class="comentario"><%= quote.comentario %></p></td>
              <% end %>   
             </tbody>
           </table>    
