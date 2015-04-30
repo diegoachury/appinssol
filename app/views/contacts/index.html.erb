@@ -1,35 +1,35 @@
 <% if admin_signed_in? %>
-<h1>Listing contacts</h1>
+<section class="panel">
+    <div class="content-bg">
+      <p class="title">BIENVENIDO USUARIO ADMINISTRADOR</p>
+    </div>
+    <div class="panel-users">
+      <p class="title">LISTADO DE CONTACTOS ENVIADOS</p>
+        <p class="line"></p>
+        <table class="table table-bordered">
+          <tr class="tr">
+            <th>Datos</th>
+            <th>Solicitud</th>        
 
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Email</th>
-    <th>Direccion</th>
-    <th>Ciudad</th>
-    <th>Telefono</th>
-    <th>Comentario</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+          </tr>
 
-<% @contacts.each do |contact| %>
-  <tr>
-    <td><%= contact.nombre %></td>
-    <td><%= contact.email %></td>
-    <td><%= contact.direccion %></td>
-    <td><%= contact.ciudad %></td>
-    <td><%= contact.telefono %></td>
-    <td><%= contact.comentario %></td>
-    <td><%= link_to 'Show', contact %></td>
-    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Contact', new_contact_path %>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td>
+                <p class="name"><strong><%= contact.nombre %></strong></p>
+                <p class="datos"><strong>Correo:</strong> <%= contact.email %></p>                
+                <p class="datos"><strong>Ciudad:</strong> <%= contact.ciudad %></p>        
+                <p class="datos"><strong>Telefono:</strong><%= contact.telefono %></p>                
+                <p class="datos"><%= contact.created_at.strftime(" %m/%d/%Y - %I:%M %p") %></p>
+            </td>
+            <td><p class="datos"><strong>Servicio interesado:</strong>  <%= contact.comentario %></p></td>
+            <td><%= link_to 'Eliminar', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            
+                     
+          </tr>
+        <% end %>
+        </table>  
+    </div>
+    
+</section>    
 <% end %>
