@@ -1,16 +1,17 @@
-<div class="container">
-	 <%= render 'share/navpro' %>
-	 <br>
-	 <div class="row">
-	 	<div class="span2">
-	 		<%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left icon-white'></i> Regresar</div>".html_safe, products_path %>
-	 	</div>
-	 	<div class="span3">
-	 			 <h4>Nuevo Producto</h4>
-	 	</div>
-	 </div>
+<div class="content-top">
+	<div class="container">
+		 <%= render 'share/navpro' %>
+		 <br>
+		 <div class="row">
+		 	<div class="span2">
+		 		<%= link_to "<div class='btn btn-primary'><i class='icon-chevron-left icon-white'></i> Regresar</div>".html_safe, products_path %>
+		 	</div>
+		 	<div class="span3">
+		 			 <h4>Nuevo Producto</h4>
+		 	</div>
+		 </div>
+	</div>
+	<br>
 </div>
-<br>
-
 <%= render 'form' %>
 
