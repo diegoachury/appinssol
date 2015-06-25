@@ -1,64 +1,66 @@
-
-<div class="container">
-  <%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
-   
-    <div class="row">
-      <div class="span3">
-         <div class="form-inputs">
-          <%= f.input :codigo_interno, placeholder: 'Codigo Interno', label: false %>
-         </div>
+<div class="content-top">
+  <div class="container">
+    <%= simple_form_for(@product) do |f| %>
+    <%= f.error_notification %>
+     
+      <div class="row">
+        <div class="span3">
+           <div class="form-inputs">
+            <%= f.input :codigo_interno, placeholder: 'Codigo Interno', label: false %>
+           </div>
+        </div>
+        <div class="span3">
+           <div class="form-inputs">
+             <%= f.input :codigo_externo, placeholder: 'Referencia Inssol', label: false %>
+           </div>
+        </div>
+        <div class="span3">
+           <div class="form-inputs">
+                 <%= f.input :marca, placeholder: 'Marca del Producto', label: false %>
+           </div>
+        </div>
+        <div class="span3">
+           <div class="form-inputs">
+                 <%= f.input :referencia_marca, placeholder: 'Referencia de la Marca', label: false %>
+           </div>
+        </div>
       </div>
-      <div class="span3">
-         <div class="form-inputs">
-           <%= f.input :codigo_externo, placeholder: 'Referencia Inssol', label: false %>
-         </div>
-      </div>
-      <div class="span3">
-         <div class="form-inputs">
-               <%= f.input :marca, placeholder: 'Marca del Producto', label: false %>
-         </div>
-      </div>
-      <div class="span3">
-         <div class="form-inputs">
-               <%= f.input :referencia_marca, placeholder: 'Referencia de la Marca', label: false %>
-         </div>
-      </div>
+  <div class="row">
+    <div class="span3">
+      <div class="form-inputs"> 
+  <%= f.collection_select :category_id, Category.all, :id, :nombre, :include_blank => false %>
+      <%= f.input :nombre, placeholder: 'Nombre del producto', label: false %>
+      <%= f.input :precio, placeholder: 'Precio', label: false %>
+      <%= f.input :imagen, placeholder: 'url de la imagen', label: false %>
+      <%= f.input :talla, placeholder: 'Talla: S, M, L', label: false %>
+      <%= f.input :color, placeholder: 'Color: Azul, Amarillo, Negro..', label: false  %>
+      
+       <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+   <i class="icon-ok icon-white"></i> Guardar
+  <% end %>   
     </div>
-<div class="row">
-  <div class="span3">
-    <div class="form-inputs"> 
-<%= f.collection_select :category_id, Category.all, :id, :nombre, :include_blank => false %>
-    <%= f.input :nombre, placeholder: 'Nombre del producto', label: false %>
-    <%= f.input :precio, placeholder: 'Precio', label: false %>
-    <%= f.input :imagen, placeholder: 'url de la imagen', label: false %>
-    <%= f.input :talla, placeholder: 'Talla: S, M, L', label: false %>
-    <%= f.input :color, placeholder: 'Color: Azul, Amarillo, Negro..', label: false  %>
-    
-     <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
- <i class="icon-ok icon-white"></i> Guardar
-<% end %>   
   </div>
-</div>
-  <div class="span3">
-  <div class="form-inputs">
-    <span>Ficha Tecnica</span>
-    <%= f.text_area :ficha_tecnica,:as => :text, :cols => 130, :rows => 15, placeholder: 'Ej: nombre: descripcion | nombre: descripcion |' %> 
+    <div class="span3">
+    <div class="form-inputs">
+      <span>Ficha Tecnica</span>
+      <%= f.text_area :ficha_tecnica,:as => :text, :cols => 130, :rows => 15, placeholder: 'Ej: nombre: descripcion | nombre: descripcion |' %> 
+    </div>
   </div>
-</div>
-<div class="span3">
-  <div class="form-inputs">
-    <span>Ficha de Producción</span>
-   <%= f.text_area :ficha_produccion, :as => :text, :cols => 130, :rows => 15, placeholder: 'Ejemplo: nombre: descripcion | nombre: descripcion |' %>
-</div>
-</div>
-<div class="span3">
-  <div class="form-inputs">
-    <span>Descripción</span>
-   <%= f.text_area :descripcion, :as => :text, :cols => 130, :rows => 15 %>
-</div>
-</div>
-</div>  
-<% end %>
-</div>
+  <div class="span3">
+    <div class="form-inputs">
+      <span>Ficha de Producción</span>
+     <%= f.text_area :ficha_produccion, :as => :text, :cols => 130, :rows => 15, placeholder: 'Ejemplo: nombre: descripcion | nombre: descripcion |' %>
+  </div>
+  </div>
+  <div class="span3">
+    <div class="form-inputs">
+      <span>Descripción</span>
+     <%= f.text_area :descripcion, :as => :text, :cols => 130, :rows => 15 %>
+  </div>
+  </div>
+  </div>  
+  <% end %>
+  </div>
 
+    
+</div>
