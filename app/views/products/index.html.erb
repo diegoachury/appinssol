@@ -51,7 +51,10 @@
           <% end %>
         </div>
        </div>
-       <br>         
+       <br>
+       <div class="" style="visibility: hidden;">         
+         <%= link_to 'Descargar as .xlsx', products_path(format: :xlsx) %>
+       </div>
       <% @products.each do |product| %>
       <table class="table table-striped">
         <thead>
@@ -94,6 +97,5 @@
   <%= will_paginate @products, :class => 'flickr_pagination',   :previous_label => t("will_paginate.previous_label"),
     :next_label     => t("will_paginate.next_label")%>
   </div>
-  
-</div>
 
+</div>

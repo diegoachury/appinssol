@@ -4,11 +4,13 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-     @products = Product.search(params[:search], params[:page])
+    @products_export = Product.order('nombre DESC')
+    @products = Product.search(params[:search], params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }
+      format.xlsx
     end
   end
 

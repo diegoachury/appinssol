@@ -1,0 +1,35 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Products") do |sheet|
+	sheet.add_row [
+								 "Imagen",
+								 "Codigo Interno",
+								 "Codigo Externo",
+								 "Nombre",
+								 "Precio",
+								 "Descripcion",
+								 "Marca",
+								 "Talla",
+								 "Color",
+								 "Ficha Tecnica",
+								 "Ficha de Produccion",
+								  "Referencia Marca",
+									"Categoria"
+								 ]
+  @products_export.each do |product|
+    sheet.add_row [
+										product.imagen,
+										product.codigo_interno,
+										product.codigo_externo,
+										product.nombre,
+										product.precio,
+										product.descripcion,
+										product.marca,
+										product.talla,
+										product.color,
+										product.ficha_tecnica,
+										product.ficha_produccion,
+										product.referencia_marca,
+										product.category.nombre
+										]
+  end
+end

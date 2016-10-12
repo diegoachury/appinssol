@@ -7,13 +7,21 @@ gem 'rails', '3.2.12'
 
 gem 'pg'
 
-gem 'simple_form'
-gem 'devise'
-gem 'heroku'
-gem 'google-analytics-rails'
-gem 'newrelic_rpm'
-gem 'will_paginate'
+gem 'simple_form', '~> 2.1.3'
+gem 'devise', '~> 3.5.6'
 
+gem 'google-analytics-rails', '~> 1.1.0'
+gem 'newrelic_rpm', '~> 3.15.1.316'
+gem 'will_paginate', '~> 3.1.0'
+# exportar a excel
+gem 'rubyzip', '~> 1.1', '>= 1.1.7'
+#gem 'axlsx', '~> 2.0', '>= 2.0.1'
+gem 'axlsx', '2.1.0.pre', git: 'https://github.com/randym/axlsx.git'
+gem 'axlsx_rails', '~> 0.5.0'
+
+group :production do
+    gem 'heroku', '~> 3.42.50'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,8 +35,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
