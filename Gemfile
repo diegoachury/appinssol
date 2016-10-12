@@ -20,6 +20,7 @@ gem 'axlsx', '2.1.0.pre', git: 'https://github.com/randym/axlsx.git'
 gem 'axlsx_rails', '~> 0.5.0'
 
 group :production do
+    gem 'rails_12factor', '~> 0.0.3'
     gem 'heroku', '~> 3.42.50'
 end
 
